@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Hairline');
 
-/* $headings-font-family: Bungee Hairline; */
+$headings-font-family: Bungee Hairline;
 $primary: #1e6d1e;
 $secondary: #6f7f8c;
 $success: #3e4d59;
@@ -37,6 +37,10 @@ $enable-responsive-font-sizes: true;
   
   a {
     cursor: pointer !important;
+  }
+
+  body {
+    color: white;
   }
 
   .intro-header {
@@ -74,8 +78,14 @@ $enable-responsive-font-sizes: true;
   .md-form label {
     color: #ffffff;
   }
-  h6 {
+
+  h1, h2 {
+    font-weight: 500;
+  }
+
+  h1, h2, h6 {
     line-height: 1.7;
+    font-weight: 600;
   }
   @media (max-width: 740px) {
     .full-height,
