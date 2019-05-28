@@ -1,0 +1,22 @@
+  .bg {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: url("../../../../images/Torre-cenital.JPG");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content {
+    margin: 1rem;
+  }
+
+ul {
+  padding: 1% 1px 5px 10px;
+  background-color: rgba(78, 78, 150, 0.74);
+  margin: 1rem;
+}

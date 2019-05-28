@@ -1,0 +1,8 @@
+:host {
+    .grid-container{
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: auto;
+        height: 100vh;
+    }
+}

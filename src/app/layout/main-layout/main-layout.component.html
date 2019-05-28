@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-12 col-lg-2 bg-light">
+      <hr />
+      <sn-nav></sn-nav>
+      <hr />
+      <a class="btn btn-link" (click)="authService.logout()">Logout</a>
+    </nav>
+    <main class="col-12 col-md-8 col-lg-7">
+      <router-outlet></router-outlet>
+    </main>
+    <aside class="col-12 col-md-4 col-lg-3">
+      <sn-friend-requests></sn-friend-requests>
+    </aside>
+  </div>
+</div>

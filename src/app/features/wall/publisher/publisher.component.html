@@ -1,0 +1,9 @@
+<div class="d-flex">
+  <sn-avatar [user]="userService?.currentUser" height="50px"></sn-avatar>
+  <div class="flex-grow-1 ml-2 mr-2">
+    <textarea class="form-control" #text (keydown)="exploreKey(text.value)"></textarea>
+  </div>
+  <button class="btn btn-info" (click)="publishContent(text.value)">
+    Submit
+  </button>
+</div>

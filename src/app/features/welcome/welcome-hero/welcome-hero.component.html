@@ -1,0 +1,14 @@
+<h2 class="h1 h1-responsive font-bold wow fadeInLeft" data-wow-delay="0.3s">
+  Welcome</h2>
+<hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+<h6 class="wow fadeInLeft" data-wow-delay="0.3s">
+  The Family Shopping Cart. A place where you don't forget anything.</h6>
+<hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+<ul class="list-unstyled">
+  <li *ngFor="let item of rows" class="mt-4">
+    <h6>
+      <i [class]="item.icon"></i>
+      {{ item.message }}
+    </h6>
+  </li>
+</ul>
