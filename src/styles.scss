@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Hairline');
 
-$headings-font-family: Bungee Hairline;
+/* $headings-font-family: Bungee Hairline; */
 $primary: #1e6d1e;
 $secondary: #6f7f8c;
 $success: #3e4d59;
@@ -46,12 +46,12 @@ $enable-responsive-font-sizes: true;
     background: url("./images/Naturaleza.jpg")no-repeat center center;
     background-size: cover;
   }
-/*   .view {
+  .view {
     height: 100vh !important;
-  } */
-  .top-nav-collapse {
-    background-color: #3f51b5 !important;
   }
+/*   .top-nav-collapse {
+    background-color: #3f51b5 !important;
+  } */
   .navbar:not(.top-nav-collapse) {
     background: transparent /* !important */;
   }
