@@ -3,7 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'sn-welcome',
   templateUrl: './welcome.component.html',
-  styles: []
+  styles: [`
+  section {
+    padding: 10rem;
+  }`]
 })
 
 export class WelcomeComponent {
