@@ -17,4 +17,15 @@ export class UserService {
       .get(`${environment.apiBaseUrl}/user`)
       .pipe(tap((user: SocialNetworkUser) => (this.currentUser = user)));
   }
+
+  updateProfile(profile) {
+    return this.http.put(`${environment.apiBaseUrl}/user`, profile).pipe(
+      tap(() => {
+        this.currentUser = {
+          ...this.currentUser,
+          ...profile
+        };
+      })
+    );
+  }
 }
