@@ -9,7 +9,7 @@ export class AboutComponent {
   description = `I'm a full stack developer. 
   You can see in my social networks more information about me:`;
   contact = {
-    description: 'If you want to contact with me, please can send me an e-mail to:',
+    description: 'If you want to contact with me, please can send me an email to:',
     mail: 'mavluis@gmail.com',
     firm: '® Luis Fernández Martínez © 2019'
   };

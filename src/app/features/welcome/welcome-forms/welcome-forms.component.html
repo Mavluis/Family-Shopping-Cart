@@ -3,19 +3,19 @@
     <div class="card-body">
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link active" [class.active]="isRegisterFormVisible" (click)="toggleForm(true)">Register</a>
+          <a class="nav-link active" [class.active]="isRegisterFormVisible" (click)="toggleForm(true)">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [class.active]="!isRegisterFormVisible" (click)="toggleForm(false)">Login</a>
+          <a class="nav-link" [class.active]="!isRegisterFormVisible" (click)="toggleForm(false)">Register</a>
         </li>
       </ul>
 
       <div *ngIf="isRegisterFormVisible">
-        <sn-register></sn-register>
+          <sn-login></sn-login>
       </div>
 
       <div *ngIf="!isRegisterFormVisible">
-        <sn-login></sn-login>
+          <sn-register></sn-register>
       </div>
     </div>
   </div>
