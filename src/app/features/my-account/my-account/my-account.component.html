@@ -1,1 +1,36 @@
-<h1>Prueba de My-Account</h1>
+<form class="p-5" [formGroup]="updateProfileForm" [snMarkAsTouched]="updateProfileForm" (ngSubmit)="updateProfile()">
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" type="text" formControlName="fullName" placeholder="Enter your name" />
+        <sn-validation-messages [control]="updateProfileForm.get('fullName')"></sn-validation-messages>
+    </div>
+
+    <div formGroupName="preferences">
+        <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" type="text" rows="10" formControlName="description"
+                placeholder="Tell us about you"></textarea>
+            <sn-validation-messages [control]="updateProfileForm.get('preferences.description')">
+            </sn-validation-messages>
+        </div>
+
+        <div class="form-group">
+            <label>LinkedIn</label>
+            <input class="form-control" type="text" formControlName="linkedIn" placeholder="Enter your LinkedIn url" />
+            <sn-validation-messages [control]="updateProfileForm.get('preferences.linkedIn')"></sn-validation-messages>
+        </div>
+
+        <div class="form-group">
+            <label>Twitter</label>
+            <input class="form-control" type="text" formControlName="twitter" placeholder="Enter your Twitter url" />
+            <sn-validation-messages [control]="updateProfileForm.get('preferences.twitter')"></sn-validation-messages>
+        </div>
+
+        <div class="form-group">
+            <label>Github</label>
+            <input class="form-control" type="text" formControlName="github" placeholder="Enter your Github url" />
+            <sn-validation-messages [control]="updateProfileForm.get('preferences.github')"></sn-validation-messages>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
