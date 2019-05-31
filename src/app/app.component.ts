@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoaderService } from './core/services/loader.service';
 
 @Component({
   selector: 'sn-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'the-shopping-cart';
+
+  constructor(public loadererService: LoaderService ) {}
 }

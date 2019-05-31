@@ -1,11 +1,11 @@
 <div class="grid-container">
-    <sn-header></sn-header>
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-    <sn-footer></sn-footer>
-  </div>
+  <sn-header></sn-header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <sn-footer></sn-footer>
+</div>
 
-  <sn-modal></sn-modal>
-  <sn-toast></sn-toast>
-  <sn-loader *ngIf="loaderService.isLoading"></sn-loader>
+<sn-modal></sn-modal>
+<sn-toast></sn-toast>
+<sn-loader *ngIf="loaderService.isLoading"></sn-loader>
