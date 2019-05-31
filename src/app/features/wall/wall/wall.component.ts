@@ -5,11 +5,12 @@ import { PublisherComponent } from '../publisher/publisher.component';
 
 @Component({
     selector: 'sn-wall',
-    templateUrl: 'wall.component.html',
+    templateUrl: './wall.component.html',
     styleUrls: ['./wall.component.scss']
 })
 
 export class WallComponent implements OnInit, AfterViewInit {
+    convertToHtml: () => {};
     @ViewChildren(PublisherComponent) publisherComponents;
 
     constructor(
