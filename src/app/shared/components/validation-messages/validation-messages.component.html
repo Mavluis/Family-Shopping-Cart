@@ -17,10 +17,7 @@
 </ng-container>
 
 <ng-container *ngIf="group?.dirty || group?.touched">
-  <div
-    class="invalid-feedback"
-    *ngIf="control.valid && group?.hasError('passwordMismatch')"
-  >
+  <div class="invalid-feedback" *ngIf="control.valid && group?.hasError('passwordMismatch')">
     <i class="fa fa-exclamation-triangle"></i> Password and confirmation should
     match
   </div>

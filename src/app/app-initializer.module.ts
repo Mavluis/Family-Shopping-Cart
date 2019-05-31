@@ -1,5 +1,6 @@
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { UserService } from './core/services/user.service';
+import { NotificationService } from './core/services/notification.service';
 
 export function getInitialData(userService: UserService) {
   return () => {
@@ -23,7 +24,7 @@ export function getInitialData(userService: UserService) {
     {
       provide: APP_INITIALIZER,
       useFactory: getInitialData,
-      deps: [UserService],
+      deps: [UserService, NotificationService],
       multi: true
     }
   ]
