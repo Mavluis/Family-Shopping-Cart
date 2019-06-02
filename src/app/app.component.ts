@@ -9,5 +9,5 @@ import { LoaderService } from './core/services/loader.service';
 export class AppComponent {
   title = 'the-shopping-cart';
 
-  constructor(public loadererService: LoaderService ) {}
+  constructor(public loaderService: LoaderService ) {}
 }

@@ -7,7 +7,7 @@
             <div class="ml-3">
                 <h3>{{ post.author?.fullName }}</h3>
                 <small class="badge badge-light">{{
-          post.createdAt | userFriendly
+    post.createdAt | userFriendly
         }}</small>
             </div>
         </div>
@@ -23,15 +23,15 @@
             <ng-container *ngFor="let comment of post.comments">
                 <div class="d-flex my-3" [ngClass]="{
             'flex-row-reverse':
-              comment.author.uuid === userService.currentUser.uuid
-          }">
+            comment.author.uuid === userService.currentUser.uuid
+        }">
                     <sn-avatar [user]="
-              comment.author.uuid === userService.currentUser.uuid
+            comment.author.uuid === userService.currentUser.uuid
                 ? userService.currentUser
                 : comment.author
             " width="60px" height="60px"></sn-avatar>
                     <div class="bg-primary text-light rounded flex-grow-1 mx-3 p-2 comment" [class.bg-info]="
-              comment.author.uuid === userService.currentUser.uuid
+            comment.author.uuid === userService.currentUser.uuid
             ">
                         <h3>{{ comment.author?.fullName }}</h3>
                         <p>{{ comment.message }}</p>
