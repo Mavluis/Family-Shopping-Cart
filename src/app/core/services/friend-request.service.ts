@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { tap } from 'rxjs/operators';
-import { FriendRequest } from 'src/app/features/wall/wall.models';
+import { FriendRequest } from '../core.models';
 import { Injectable } from '@angular/core';
 
 @Injectable({
