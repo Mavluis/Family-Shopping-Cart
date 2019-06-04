@@ -7,9 +7,6 @@ import { ValidationMessagesComponent } from './components/validation-messages/va
 import { MarkAsTouchedDirective } from './directives/mark-as-touched-directive';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
-import { FriendRequestsComponent } from './components/friend-requests/friend.requests.component';
-import { CapitalizePipe } from './pipes/capitalize.pipe';
-import { UserFriendlyPipe } from './pipes/user-friendly.pipe';
 
 @NgModule({
   declarations: [
@@ -18,10 +15,7 @@ import { UserFriendlyPipe } from './pipes/user-friendly.pipe';
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
     NotFoundComponent,
-    AvatarComponent,
-    FriendRequestsComponent,
-    CapitalizePipe,
-    UserFriendlyPipe
+    AvatarComponent
     ],
   imports: [CommonModule, ReactiveFormsModule],
   exports: [
@@ -30,10 +24,7 @@ import { UserFriendlyPipe } from './pipes/user-friendly.pipe';
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
     NotFoundComponent,
-    AvatarComponent,
-    FriendRequestsComponent,
-    CapitalizePipe,
-    UserFriendlyPipe
+    AvatarComponent
   ]
 })
 export class SharedModule {}
