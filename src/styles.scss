@@ -62,7 +62,11 @@ $enable-responsive-font-sizes: true;
     background-color: rgba(17, 121, 31, 0.2);
     color: black;
   }
-  
+
+  .card-body {
+    padding: 5px 20px 5px 20px;
+  }
+
   .md-form .prefix {
     font-size: 1.5rem;
     margin-top: 1rem;
