@@ -3,7 +3,7 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Post } from 'src/app/features/wall/wall.models';
-import { SocialNetworkUser } from '../core.models';
+import { ShoppingCartUser } from '../core.models';
 
 @Injectable({
     providedIn: 'root'
@@ -31,7 +31,7 @@ export class WallService {
             .pipe(tap((post: Post) => this.posts.unshift(post)));
     }
 
-    addComment(postId: string, message: string, user: SocialNetworkUser) {
+    addComment(postId: string, message: string, user: ShoppingCartUser) {
         return this.http
             .post(`${environment.apiBaseUrl}/post/${postId}/comment`, {
                 message

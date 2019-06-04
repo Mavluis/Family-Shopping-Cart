@@ -14,7 +14,7 @@ export class NotificationService {
       if (params.notification === 'account-activated') {
         this.modalService.open(
           'Account activated!!',
-          'Please, log in and start enyoying our Social Network'
+          'Please, log in and start enyoying our Shopping Cart'
         );
       } else if (params.notification === 'account-not-activated') {
         this.modalService.open(

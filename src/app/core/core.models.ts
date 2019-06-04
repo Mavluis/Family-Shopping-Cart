@@ -23,7 +23,7 @@ export interface Preferences {
   description: string;
 }
 
-export interface SocialNetworkUser {
+export interface ShoppingCartUser {
   uuid: string;
   fullName: string;
   email: string;
