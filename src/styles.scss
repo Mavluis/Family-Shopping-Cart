@@ -55,22 +55,9 @@ $enable-responsive-font-sizes: true;
     background-size: cover;
   }
   .view {
-    height: 80vh !important;
+    height: 100% !important;
   }
-  .top-nav-collapse {
-    background-color: #3f51b5 !important;
-  }
-  .navbar:not(.top-nav-collapse) {
-    background: primary !important;
-  }
-  @media (max-width: 768px) {
-    .navbar:not(.top-nav-collapse) {
-      background: primary !important;
-    }
-  }
-  .rgba-gradient .full-bg-img {
-    background: linear-gradient(45deg, rgba(83, 125, 210, 0.4), rgba(178, 30, 123, 0.4) 50%);
-  }
+
   .card {
     background-color: rgba(17, 121, 31, 0.2);
     color: black;
@@ -88,11 +75,4 @@ $enable-responsive-font-sizes: true;
     line-height: 1.7;
     font-weight: 600;
   }
-  @media (max-width: 740px) {
-    .full-height,
-    .full-height body,
-    .full-height header,
-    .full-height header .view {
-      height: 1040px;
-    }
-  }
+
