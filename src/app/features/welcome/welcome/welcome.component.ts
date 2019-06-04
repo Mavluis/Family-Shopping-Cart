@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './welcome.component.html',
   styles: [`
   section {
-    padding: 10rem;
+    padding: 2rem;
   }`]
 })
 
