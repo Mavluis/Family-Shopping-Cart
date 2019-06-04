@@ -10,7 +10,6 @@ import { AvatarComponent } from './components/avatar/avatar.component';
 import { FriendRequestsComponent } from './components/friend-requests/friend.requests.component';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { UserFriendlyPipe } from './pipes/user-friendly.pipe';
-import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +21,8 @@ import { LoaderComponent } from './components/loader/loader.component';
     AvatarComponent,
     FriendRequestsComponent,
     CapitalizePipe,
-    UserFriendlyPipe,
-    LoaderComponent
-  ],
+    UserFriendlyPipe
+    ],
   imports: [CommonModule, ReactiveFormsModule],
   exports: [
     LoginComponent,
@@ -35,8 +33,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     AvatarComponent,
     FriendRequestsComponent,
     CapitalizePipe,
-    UserFriendlyPipe,
-    LoaderComponent
+    UserFriendlyPipe
   ]
 })
 export class SharedModule {}
