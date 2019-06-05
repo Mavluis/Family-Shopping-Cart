@@ -46,7 +46,6 @@ export class CartService {
                                 message,
                                 author: {
                                     uuid: user.uuid,
-                                    avatarUrl: user.avatarUrl,
                                     fullName: user.fullName
                                 }
                             });

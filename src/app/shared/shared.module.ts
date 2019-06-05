@@ -6,7 +6,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ValidationMessagesComponent } from './components/validation-messages/validation-messages.component';
 import { MarkAsTouchedDirective } from './directives/mark-as-touched-directive';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { AvatarComponent } from './components/avatar/avatar.component';
+
 
 @NgModule({
   declarations: [
@@ -14,8 +14,7 @@ import { AvatarComponent } from './components/avatar/avatar.component';
     RegisterComponent,
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
-    NotFoundComponent,
-    AvatarComponent
+    NotFoundComponent
     ],
   imports: [CommonModule, ReactiveFormsModule],
   exports: [
@@ -23,8 +22,7 @@ import { AvatarComponent } from './components/avatar/avatar.component';
     RegisterComponent,
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
-    NotFoundComponent,
-    AvatarComponent
+    NotFoundComponent
   ]
 })
 export class SharedModule {}

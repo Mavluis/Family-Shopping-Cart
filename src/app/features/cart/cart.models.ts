@@ -1,6 +1,5 @@
 export interface Author {
     uuid: string;
-    avatarUrl: string;
     fullName: string;
 }
 
