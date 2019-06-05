@@ -27,7 +27,7 @@ export class LoginComponent {
         () => {
           this.userService.getUserProfile().subscribe();
           console.log(this.authService, this.userService);
-          this.router.navigate(['/wall']);
+          this.router.navigate(['/cart']);
         },
         () => this.loginForm.get('password').setValue('')
       );

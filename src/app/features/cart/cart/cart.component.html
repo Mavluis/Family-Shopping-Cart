@@ -1,13 +1,13 @@
 <sn-publisher (publish)="addPost($event)"></sn-publisher>
 
 <section>
-    <article class="card mt-3" *ngFor="let post of wallService.posts">
+    <article class="card mt-3" *ngFor="let post of cartService.posts">
         <div class="card-header d-flex bg-primary text-light">
             <sn-avatar [user]="userService.currentUser" height="60px"></sn-avatar>
             <div class="ml-3">
                 <h3>{{ post.author?.fullName }}</h3>
                 <small class="badge badge-light">{{
-    post.createdAt | userFriendly
+    post.createdAt | date
         }}</small>
             </div>
         </div>
@@ -35,7 +35,7 @@
             ">
                         <h3>{{ comment.author?.fullName }}</h3>
                         <p>{{ comment.message }}</p>
-                        <small>{{ comment.createdAt | userFriendly }}</small>
+                        <small>{{ comment.createdAt | date }}</small>
                     </div>
                 </div>
             </ng-container>

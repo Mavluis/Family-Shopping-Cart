@@ -2,19 +2,19 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
-import { Post } from 'src/app/features/wall/wall.models';
+import { Post } from 'src/app/features/cart/cart.models';
 import { ShoppingCartUser } from '../core.models';
 
 @Injectable({
     providedIn: 'root'
 })
-export class WallService {
+export class CartService {
     posts: Post[];
 
     constructor(private http: HttpClient) { }
 
-    getWall() {
-        return this.http.get(`${environment.apiBaseUrl}/user/wall`).pipe(
+    getCart() {
+        return this.http.get(`${environment.apiBaseUrl}/user/cart`).pipe(
             tap((posts: Post[]) => {
                 this.posts = posts.sort((p1, p2) => {
                     return p2.createdAt - p1.createdAt;

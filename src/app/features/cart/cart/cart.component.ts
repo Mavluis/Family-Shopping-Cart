@@ -1,25 +1,25 @@
 import { Component, OnInit, ViewChild, ViewChildren, AfterViewInit } from '@angular/core';
 import { UserService } from 'src/app/core/services/user.service';
-import { WallService } from 'src/app/core/services/wall.service';
+import { CartService } from 'src/app/core/services/cart.service';
 import { PublisherComponent } from '../publisher/publisher.component';
 
 @Component({
-    selector: 'sn-wall',
-    templateUrl: './wall.component.html',
-    styleUrls: ['./wall.component.scss']
+    selector: 'sn-cart',
+    templateUrl: './cart.component.html',
+    styleUrls: ['./cart.component.scss']
 })
 
-export class WallComponent implements OnInit, AfterViewInit {
+export class CartComponent implements OnInit, AfterViewInit {
     convertToHtml: () => {};
     @ViewChildren(PublisherComponent) publisherComponents;
 
     constructor(
         public userService: UserService,
-        public wallService: WallService
+        public cartService: CartService
     ) { }
 
     ngOnInit() {
-        this.wallService.getWall().subscribe();
+        this.cartService.getCart().subscribe();
     }
 
     ngAfterViewInit() {
@@ -27,11 +27,11 @@ export class WallComponent implements OnInit, AfterViewInit {
     }
 
     addPost(content) {
-        this.wallService.publish(content).subscribe();
+        this.cartService.publish(content).subscribe();
     }
 
     addComment(postId, message) {
-        this.wallService
+        this.cartService
             .addComment(postId, message, this.userService.currentUser)
             .subscribe();
     }

@@ -20,8 +20,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {
-        path: 'wall',
-        loadChildren: './features/wall/wall.module#WallModule'
+        path: 'cart',
+        loadChildren: './features/cart/cart.module#CartModule'
       },
       {
         path: 'my-account',
