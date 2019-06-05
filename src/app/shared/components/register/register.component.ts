@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { MatchPasswordValidator } from '../../validator/match-password.validator';
 import { ModalService } from 'src/app/core/services/modal.service';
+import { MailValidator } from '../../validator/mail.validator';
 
 @Component({
   selector: 'sn-register',
@@ -15,7 +16,7 @@ export class RegisterComponent {
   registerForm = this.fb.group(
     {
       fullName: ['', [Validators.required, Validators.minLength(3)]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, MailValidator]],
       password: ['', [Validators.required, Validators.minLength(7)]],
       confirmPassword: ['', [Validators.required]]
     },

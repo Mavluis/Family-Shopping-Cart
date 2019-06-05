@@ -49,14 +49,14 @@ $enable-responsive-font-sizes: true;
   }
 
   .intro-header {
-    height: unset !important;
+    height: unset;
   }
   .intro-2 {
     background: url("./images/Naturaleza.jpg") no-repeat center center;
     background-size: cover;
   }
   .view {
-    height: 100% !important;
+    height: 100%;
   }
 
   .card {
