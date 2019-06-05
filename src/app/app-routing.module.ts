@@ -24,10 +24,6 @@ const routes: Routes = [
         loadChildren: './features/wall/wall.module#WallModule'
       },
       {
-        path: 'friends',
-        loadChildren: './features/friends/friends.module#FriendsModule'
-      },
-      {
         path: 'my-account',
         loadChildren: './features/my-account/my-account.module#MyAccountModule'
       }
