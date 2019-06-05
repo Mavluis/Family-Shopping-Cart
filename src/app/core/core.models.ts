@@ -5,21 +5,10 @@ export interface AuthInfo {
   refreshToken: string;
   uuid: string;
 }
-
-export interface Friend {
-  _id: string;
-  uuid: string;
-  confirmed: boolean;
-  createdAt: Date;
-  confirmedAt: Date;
-  rejectedAt?: any;
-}
-
 export interface Preferences {
-  isPublicProfile: boolean;
   password?: string;
-  twitter?: string;
-  github?: string;
+  newpassword?: string;
+  repeatnewpass?: string;
   description: string;
 }
 
@@ -27,7 +16,6 @@ export interface ShoppingCartUser {
   uuid: string;
   fullName: string;
   email: string;
-  friends: Friend[];
   avatarUrl: string;
   preferences: Preferences;
 }
@@ -52,27 +40,4 @@ export interface ErrorData {
   value: string;
   key: string;
   label: string;
-}
-
-export interface FriendRequest {
-  uuid: string;
-  avatarUrl: string;
-  fullName: string;
-  request: Request;
-}
-
-export interface Request {
-  uuid: string;
-  confirmed: boolean;
-  createdAt: number;
-  confirmedAt: number;
-  rejectedAt: number;
-}
-
-export interface SearchResult {
-  uuid: string;
-  fullName: string;
-  friends: Request[];
-  avatarUrl?: any;
-  preferences: Preferences;
 }

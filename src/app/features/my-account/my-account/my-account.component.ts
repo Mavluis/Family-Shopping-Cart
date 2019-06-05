@@ -13,8 +13,8 @@ export class MyAccountComponent implements OnInit {
         preferences: this.fb.group({
             isPublicProfile: [false],
             password: ['', [Validators.nullValidator]],
-            twitter: ['', [Validators.nullValidator]],
-            github: ['', [Validators.nullValidator]],
+            newpassword: ['', [Validators.nullValidator]],
+            repeatnewpass: ['', [Validators.nullValidator]],
             description: []
         })
     });

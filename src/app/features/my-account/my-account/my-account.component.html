@@ -7,29 +7,29 @@
 
     <div formGroupName="preferences">
         <div class="form-group">
-            <label>Description</label>
+            <label>Regular shopping list</label>
             <textarea class="form-control" type="text" rows="6" formControlName="description"
-                placeholder="Regular shopping list"></textarea>
+                placeholder="Enter regular shopping list..."></textarea>
             <sn-validation-messages [control]="updateProfileForm.get('preferences.description')">
             </sn-validation-messages>
         </div>
 
         <div class="form-group">
-            <label>password</label>
+            <label>Change Password</label>
             <input class="form-control" type="text" formControlName="password" placeholder="Enter your password" />
             <sn-validation-messages [control]="updateProfileForm.get('preferences.password')"></sn-validation-messages>
         </div>
 
         <div class="form-group">
-            <label>Twitter</label>
-            <input class="form-control" type="text" formControlName="twitter" placeholder="Enter new password" />
-            <sn-validation-messages [control]="updateProfileForm.get('preferences.twitter')"></sn-validation-messages>
+            <label>Change New password</label>
+            <input class="form-control" type="text" formControlName="newpassword" placeholder="Enter new password" />
+            <sn-validation-messages [control]="updateProfileForm.get('preferences.newpassword')"></sn-validation-messages>
         </div>
 
         <div class="form-group">
-            <label>Github</label>
-            <input class="form-control" type="text" formControlName="github" placeholder="Repite new password" />
-            <sn-validation-messages [control]="updateProfileForm.get('preferences.github')"></sn-validation-messages>
+            <label>Repeat New password</label>
+            <input class="form-control" type="text" formControlName="repeatnewpass" placeholder="Repite new password" />
+            <sn-validation-messages [control]="updateProfileForm.get('preferences.repeatnewpass')"></sn-validation-messages>
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
