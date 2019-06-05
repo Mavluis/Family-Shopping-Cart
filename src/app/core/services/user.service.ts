@@ -5,7 +5,7 @@ import { ShoppingCartUser } from '../core.models';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root' // Obligatorio!! Generar una unica instancia
+  providedIn: 'root'
 })
 export class UserService {
   currentUser: ShoppingCartUser;
