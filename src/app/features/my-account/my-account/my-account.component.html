@@ -8,27 +8,27 @@
     <div formGroupName="preferences">
         <div class="form-group">
             <label>Description</label>
-            <textarea class="form-control" type="text" rows="2" formControlName="description"
-                placeholder="Tell us about you"></textarea>
+            <textarea class="form-control" type="text" rows="6" formControlName="description"
+                placeholder="Regular shopping list"></textarea>
             <sn-validation-messages [control]="updateProfileForm.get('preferences.description')">
             </sn-validation-messages>
         </div>
 
         <div class="form-group">
-            <label>LinkedIn</label>
-            <input class="form-control" type="text" formControlName="linkedIn" placeholder="Enter your LinkedIn url" />
-            <sn-validation-messages [control]="updateProfileForm.get('preferences.linkedIn')"></sn-validation-messages>
+            <label>password</label>
+            <input class="form-control" type="text" formControlName="password" placeholder="Enter your password" />
+            <sn-validation-messages [control]="updateProfileForm.get('preferences.password')"></sn-validation-messages>
         </div>
 
         <div class="form-group">
             <label>Twitter</label>
-            <input class="form-control" type="text" formControlName="twitter" placeholder="Enter your Twitter url" />
+            <input class="form-control" type="text" formControlName="twitter" placeholder="Enter new password" />
             <sn-validation-messages [control]="updateProfileForm.get('preferences.twitter')"></sn-validation-messages>
         </div>
 
         <div class="form-group">
             <label>Github</label>
-            <input class="form-control" type="text" formControlName="github" placeholder="Enter your Github url" />
+            <input class="form-control" type="text" formControlName="github" placeholder="Repite new password" />
             <sn-validation-messages [control]="updateProfileForm.get('preferences.github')"></sn-validation-messages>
         </div>
     </div>

@@ -17,7 +17,7 @@ export interface Friend {
 
 export interface Preferences {
   isPublicProfile: boolean;
-  linkedIn?: string;
+  password?: string;
   twitter?: string;
   github?: string;
   description: string;

@@ -12,7 +12,7 @@ export class MyAccountComponent implements OnInit {
         fullName: ['', [Validators.required]],
         preferences: this.fb.group({
             isPublicProfile: [false],
-            linkedIn: ['', [Validators.nullValidator]],
+            password: ['', [Validators.nullValidator]],
             twitter: ['', [Validators.nullValidator]],
             github: ['', [Validators.nullValidator]],
             description: []
