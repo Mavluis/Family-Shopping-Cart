@@ -1,14 +1,14 @@
 <form class="p-5" [formGroup]="updateProfileForm" [snMarkAsTouched]="updateProfileForm" (ngSubmit)="updateProfile()">
     <div class="form-group">
         <label>Name</label>
-        <input class="form-control" type="text" formControlName="fullName" placeholder="Enter your name" />
+        <input class="form-control" type="text" formControlName="fullName" placeholder="Enter your family name" />
         <sn-validation-messages [control]="updateProfileForm.get('fullName')"></sn-validation-messages>
     </div>
 
     <div formGroupName="preferences">
         <div class="form-group">
             <label>Description</label>
-            <textarea class="form-control" type="text" rows="10" formControlName="description"
+            <textarea class="form-control" type="text" rows="2" formControlName="description"
                 placeholder="Tell us about you"></textarea>
             <sn-validation-messages [control]="updateProfileForm.get('preferences.description')">
             </sn-validation-messages>
