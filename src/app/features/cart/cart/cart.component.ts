@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild, ViewChildren, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { UserService } from 'src/app/core/services/user.service';
 import { CartService } from 'src/app/core/services/cart.service';
-import { PublisherComponent } from '../publisher/publisher.component';
 
 @Component({
     selector: 'sn-cart',
@@ -9,9 +8,7 @@ import { PublisherComponent } from '../publisher/publisher.component';
     styleUrls: ['./cart.component.scss']
 })
 
-export class CartComponent implements OnInit, AfterViewInit {
-    convertToHtml: () => {};
-    @ViewChildren(PublisherComponent) publisherComponents;
+export class CartComponent implements OnInit {
 
     constructor(
         public userService: UserService,
@@ -20,19 +17,5 @@ export class CartComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.cartService.getCart().subscribe();
-    }
-
-    ngAfterViewInit() {
-        console.log(this.publisherComponents);
-    }
-
-    addPost(content) {
-        this.cartService.publish(content).subscribe();
-    }
-
-    addComment(postId, message) {
-        this.cartService
-            .addComment(postId, message, this.userService.currentUser)
-            .subscribe();
     }
 }
