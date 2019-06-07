@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { UserService } from 'src/app/core/services/user.service';
 import { CartService } from 'src/app/core/services/cart.service';
+import { IconsModule } from 'angular-bootstrap-md'
 
 @Component({
     selector: 'sn-cart',

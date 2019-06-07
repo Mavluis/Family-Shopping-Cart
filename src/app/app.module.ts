@@ -6,11 +6,12 @@ import { LayoutModule } from './layout/layout.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AppInitializerModule } from './app-initializer.module';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppInitializerModule, AppRoutingModule, CoreModule, LayoutModule, SharedModule],
+  imports: [BrowserModule, MDBBootstrapModule, AppInitializerModule, AppRoutingModule, CoreModule, LayoutModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })
