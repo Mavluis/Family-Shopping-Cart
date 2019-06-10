@@ -1,66 +1,24 @@
-<!-- Editable list -->
-<div class="cart">
-    <h3 class="cart-header text-center font-weight-bold text-uppercase py-4">List Family Shopping Cart</h3>
-    <div class="cart-body">
-        <div id="table" class="table-editable">
-            <span class="table-add float-right mb-3 mr-2">
-                <a class="text-success" (click)="add()">
-                    <!-- <mdb-icon fas icon="plus" size="2x"></mdb-icon> -->
-                    <i class="fas plus"></i> fa-camera-retro
-                </a>
-            </span>
-            <table class="table table-bordered table-responsive-md table-striped text-center">
-                <tr>
-                    <th class="text-center">Person Name</th>
-                    <th class="text-center">Age</th>
-                    <th class="text-center">Company Name</th>
-                    <th class="text-center">Country</th>
-                    <th class="text-center">City</th>
-                    <th class="text-center">Sort</th>
-                    <th class="text-center">Remove</th>
-                </tr>
-                <tr *ngFor="let person of personList; let id = index">
-                    <td>
-                        <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)"
-                            contenteditable="true">{{person.name}}</span>
-                    </td>
-                    <td>
-                        <span contenteditable="true" (keyup)="changeValue(id, 'age', $event)"
-                            (blur)="updateList(id, 'age', $event)">{{person.age}}</span>
-                    </td>
-                    <td>
-                        <span contenteditable="true" (keyup)="changeValue(id, 'companyName', $event)"
-                            (blur)="updateList(id, 'companyName', $event)">{{person.companyName}}</span>
-                    </td>
-                    <td>
-                        <span contenteditable="true" (keyup)="changeValue(id, 'country', $event)"
-                            (blur)="updateList(id, 'country', $event)">{{person.country}}</span>
-                    </td>
-                    <td>
-                        <span contenteditable="true" (keyup)="changeValue(id, 'city', $event)"
-                            (blur)="updateList(id, 'city', $event)">{{person.city}}</span>
-                    </td>
-                    <td>
-                        <span class="table-up">
-                            <a class="indigo-text">
-                                <!-- <mdb-icon fas icon="long-arrow-alt-up"></mdb-icon> -->
-                            </a>
-                        </span>
-                        <span class="table-down">
-                            <a class="indigo-text">
-                                <!-- <mdb-icon fas icon="long-arrow-alt-down"></mdb-icon> -->
-                            </a>
-                        </span>
-                    </td>
-                    <td>
-                        <span class="table-remove">
-                            <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0"
-                                (click)="remove(id)">Remove</button>
-                        </span>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="leche">
+    <label class="custom-control-label" for="leche">Leche</label>
 </div>
-<!-- Editable list -->
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="zumo">
+    <label class="custom-control-label" for="zumo">Zumo</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="galletas">
+    <label class="custom-control-label" for="galletas">Galletas</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="cereales">
+    <label class="custom-control-label" for="cereales">Cereales</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="yogur">
+    <label class="custom-control-label" for="yogur">Yogur</label>
+</div>
+<div class="form-group">
+    <label for="comments">Comments</label>
+    <textarea class="form-control rounded-0" id="comments" rows="10"></textarea>
+</div>
