@@ -41,9 +41,8 @@
                 <input type="checkbox" class="custom-control-input" id="yogourt">
                 <label class="custom-control-label" for="yogourt">Yogourt</label>
             </div>
-            <hr/>
         </div>
-    
+
         <div class="col-xl-3 col-6">
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="butter">
@@ -85,7 +84,6 @@
                 <input type="checkbox" class="custom-control-input" id="squash">
                 <label class="custom-control-label" for="squash">Squash</label>
             </div>
-            <hr/>
         </div>
 
         <div class="col-xl-3 col-6">
@@ -129,7 +127,6 @@
                 <input type="checkbox" class="custom-control-input" id="zucchini">
                 <label class="custom-control-label" for="zucchini">Zucchini</label>
             </div>
-            <hr/>
         </div>
 
         <div class="col-xl-3 col-6">
@@ -173,7 +170,6 @@
                 <input type="checkbox" class="custom-control-input" id="watermelon">
                 <label class="custom-control-label" for="watermelon">Watermelon</label>
             </div>
-            <hr/>
         </div>
 
     </div>
