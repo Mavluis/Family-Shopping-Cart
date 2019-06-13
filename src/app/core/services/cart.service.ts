@@ -14,40 +14,34 @@ export class CartService {
     constructor(private http: HttpClient) { }
 
     getCart() {
-        return this.http.get(`${environment.apiBaseUrl}/user/cart`).pipe(
-            tap((posts: Post[]) => {
-                this.posts = posts.sort((p1, p2) => {
-                    return p2.createdAt - p1.createdAt;
-                });
-            })
-        );
+        return this.http.get(`${environment.apiBaseUrl}/user/cart`)
+            .pipe(
+                tap((posts: Post[]) => {
+                    this.posts = posts.sort((p1, p2) => {
+                        return p2.createdAt - p1.createdAt;
+                    });
+                })
+            );
     }
 
-    publish(content: string) {
+    addCart() {
         return this.http
-            .post(`${environment.apiBaseUrl}/post`, {
-                content
-            })
+            .post(`${environment.apiBaseUrl}/post`, {})
             .pipe(tap((post: Post) => this.posts.unshift(post)));
     }
-
-    addComment(postId: string, message: string, user: ShoppingCartUser) {
+    addComment(postId: string, note: string, user: ShoppingCartUser) {
         return this.http
             .post(`${environment.apiBaseUrl}/post/${postId}/comment`, {
-                message
+                note
             })
             .pipe(
                 tap(() => {
                     this.posts.map(post => {
-                        if (post.id === postId) {
-                            post.comments.unshift({
+                        if (true) {
+                            post.notes.unshift({
                                 id: this.uuidv4(),
                                 createdAt: Date.now(),
-                                message,
-                                author: {
-                                    uuid: user.uuid,
-                                    fullName: user.fullName
-                                }
+                                note
                             });
                         }
                         return post;
@@ -55,7 +49,6 @@ export class CartService {
                 })
             );
     }
-
     uuidv4() {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
             // tslint:disable-next-line

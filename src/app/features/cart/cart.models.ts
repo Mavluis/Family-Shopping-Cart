@@ -1,21 +1,16 @@
-export interface Author {
+export interface Id {
     uuid: string;
     fullName: string;
 }
 
-export interface Comment {
-    author?: Author;
-    message: string;
+export interface Note {
     createdAt: number;
+    note: string;
     id?: string;
 }
 
 export interface Post {
-    likes: string[];
-    owner: Author;
-    author: Author;
-    content: string;
-    comments: Comment[];
+    notes: Note[];
     createdAt: any;
-    id: string;
+    id: string[];
 }
