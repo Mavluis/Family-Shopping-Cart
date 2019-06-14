@@ -4,7 +4,7 @@
 
 $headings-font-family: Bungee Hairline;
 $primary: #1e6d1e;
-$secondary: #6f7f8c;
+$secondary: #ffffff;
 $success: #3e4d59;
 $danger: #cc330d;
 $info: #5c8f94;
@@ -36,6 +36,10 @@ $enable-responsive-font-sizes: true;
     }
   }
   
+.btn-primary {
+  background-color: #1e6d1e;
+}
+
   a {
     cursor: pointer !important;
   }
@@ -53,6 +57,7 @@ $enable-responsive-font-sizes: true;
   }
   .intro-2 {
     background: url("./images/Naturaleza.jpg");
+
   }
   .view {
     height: 100%;

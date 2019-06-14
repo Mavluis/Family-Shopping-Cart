@@ -1,7 +1,12 @@
-h3 {
+a {
   font-weight: 600;
+  font-style: oblique;
 }
 
 .nav {
   justify-content: center;
+}
+
+.nav-link {
+  border-radius: 1.25rem;
 }

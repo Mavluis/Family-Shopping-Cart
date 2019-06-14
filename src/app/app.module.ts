@@ -11,7 +11,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, MDBBootstrapModule, AppInitializerModule,
+  imports: [BrowserModule, MDBBootstrapModule.forRoot(), AppInitializerModule,
     AppRoutingModule, CoreModule, LayoutModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent]
