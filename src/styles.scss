@@ -12,7 +12,7 @@ $warning: #6e9fa5;
 $light: #1e6d1e09;
 $dark: #1e2b37;
 $link-color: rgb(0, 77, 0);
-$enable-gradients: false;
+$enable-gradients: true;
 $spacer: 1rem;
 $border-width: 3px;
 $btn-border-radius: 1.25rem;
@@ -35,10 +35,6 @@ $enable-responsive-font-sizes: true;
       color: black;
     }
   }
-  
-.btn-primary {
-  background-color: #1e6d1e;
-}
 
   a {
     cursor: pointer !important;
