@@ -19,7 +19,7 @@ export interface ShoppingCartUser {
     uuid: string;
     fullName: string;
     email: string;
-    idproducts: Idproducts;
+    id: Idproducts;
 }
 
 export interface Idproducts {
