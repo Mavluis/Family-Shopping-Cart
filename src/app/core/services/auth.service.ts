@@ -41,6 +41,5 @@ export class AuthService {
     localStorage.removeItem('auth');
     this.authInfo = null;
     this.router.navigate(['/welcome']);
-    // location.href = '/welcome'; -> Asegura borrado de datos de los servicios
   }
 }

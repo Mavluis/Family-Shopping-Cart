@@ -18,7 +18,7 @@ export class ErrorInterceptor implements HttpInterceptor {
     private authService: AuthService,
     private router: Router,
     private toastService: ToastService
-  ) {}
+  ) { }
 
   intercept(
     req: HttpRequest<any>,
