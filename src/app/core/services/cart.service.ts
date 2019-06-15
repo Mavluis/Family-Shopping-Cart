@@ -24,12 +24,7 @@ export class CartService {
             );
     }
 
-    addCart() {
-        return this.http
-            .post(`${environment.apiBaseUrl}/post`, {})
-            .pipe(tap((post: Post) => this.posts.unshift(post)));
-    }
-    addComment(postId: string, note: string, user: ShoppingCartUser) {
+    addCart(postId: string, note: string, user: ShoppingCartUser) {
         return this.http
             .post(`${environment.apiBaseUrl}/post/${postId}/comment`, {
                 note
