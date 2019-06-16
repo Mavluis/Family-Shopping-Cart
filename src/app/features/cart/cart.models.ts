@@ -1,6 +1,7 @@
-export interface Id {
+export interface Author {
     uuid: string;
     fullName: string;
+    id: Id;
 }
 
 export interface Note {
@@ -15,14 +16,7 @@ export interface Post {
     id: string[];
 }
 
-export interface ShoppingCartUser {
-    uuid: string;
-    fullName: string;
-    email: string;
-    id: Idproducts;
-}
-
-export interface Idproducts {
+export interface Id {
     beer: boolean;
     galletas: boolean;
     cereals: boolean;

@@ -11,11 +11,10 @@ export class MyAccountComponent implements OnInit {
     updateProfileForm = this.fb.group({
         fullName: ['', [Validators.required]],
         preferences: this.fb.group({
-            isPublicProfile: [false],
             password: ['', [Validators.nullValidator]],
             newpassword: ['', [Validators.nullValidator]],
             repeatnewpass: ['', [Validators.nullValidator]],
-            description: []
+            regularlist: []
         })
     });
 

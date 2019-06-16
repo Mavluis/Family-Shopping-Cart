@@ -8,9 +8,9 @@
     <div formGroupName="preferences">
         <div class="form-group">
             <label>Regular shopping list</label>
-            <textarea class="form-control" type="text" rows="6" formControlName="description"
+            <textarea class="form-control" type="text" rows="6" formControlName="regularlist"
                 placeholder="Enter regular shopping list..."></textarea>
-            <sn-validation-messages [control]="updateProfileForm.get('preferences.description')">
+            <sn-validation-messages [control]="updateProfileForm.get('preferences.regularlist')">
             </sn-validation-messages>
         </div>
 

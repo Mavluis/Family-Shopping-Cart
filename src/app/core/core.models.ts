@@ -9,7 +9,7 @@ export interface Preferences {
   password?: string;
   newpassword?: string;
   repeatnewpass?: string;
-  description: string;
+  regularlist: string;
 }
 
 export interface ShoppingCartUser {
