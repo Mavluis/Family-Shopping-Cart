@@ -36,8 +36,8 @@ export class RegisterComponent {
       this.authService.register({ fullName, email, password }).subscribe(() => {
         this.registerForm.reset();
         this.modalService.open(
-          'Thanks to register!!',
-          'Now go to you email account and check instructions for activating the account'
+          'Thank you for registering!!',
+          'Please, follow the instructions to activate the account in your email, thank you!!'
         );
       });
     }
