@@ -1,5 +1,14 @@
 .modal {
     display: block;
-    background: rgba(30, 109, 30, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    display: block;
+    background: rgba(30, 109, 30, 0.9);
+    border-radius: 1.25rem;
   }
   
+h5 {
+  font-weight: 600;
+}

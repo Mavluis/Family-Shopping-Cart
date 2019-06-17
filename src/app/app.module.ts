@@ -7,12 +7,10 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AppInitializerModule } from './app-initializer.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { CarouselModule,ButtonsModule, WavesModule, IconsModule } from 'angular-bootstrap-md'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, MDBBootstrapModule.forRoot(), CarouselModule, 
-    ButtonsModule, WavesModule, IconsModule, AppInitializerModule,
+  imports: [BrowserModule, MDBBootstrapModule.forRoot(), AppInitializerModule,
     AppRoutingModule, CoreModule, LayoutModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent]

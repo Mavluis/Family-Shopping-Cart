@@ -13,12 +13,12 @@ export class NotificationService {
     this.route.queryParams.subscribe(params => {
       if (params.notification === 'account-activated') {
         this.modalService.open(
-          'Account activated!!',
-          'Please, log in and start enyoying our Shopping Cart'
+          'Account Activated!!',
+          'Please, log in and enter your Shopping Cart!!!'
         );
       } else if (params.notification === 'account-not-activated') {
         this.modalService.open(
-          'Account not activated',
+          'Account Not Activated',
           'Sorry we cannot activate your account'
         );
       }
