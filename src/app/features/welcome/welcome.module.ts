@@ -5,7 +5,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { WelcomeFormsComponent } from './welcome-forms/welcome-forms.component';
 import { WelcomeHeroComponent } from './welcome-hero/welcome-hero.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ButtonsModule, CarouselModule, WavesModule, IconsModule } from 'angular-bootstrap-md'
+import { ButtonsModule, CarouselModule, WavesModule, IconsModule } from 'angular-bootstrap-md';
+import { MDBBootstrapModule, DropdownModule } from 'angular-bootstrap-md';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [WelcomeComponent, WelcomeFormsComponent, WelcomeHeroComponent],
-  imports: [CarouselModule, WavesModule, CommonModule, RouterModule.forChild(routes), SharedModule]
+  imports: [ButtonsModule, CarouselModule, WavesModule, IconsModule, MDBBootstrapModule.forRoot(),
+    DropdownModule.forRoot(), CommonModule, RouterModule.forChild(routes), SharedModule]
 })
 export class WelcomeModule { }
