@@ -4,9 +4,10 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://127.0.0.1:3000/api'
-  /* apiBaseUrl: 'https://josesocialpoc.azurewebsites.net/api' */
+  /* apiBaseUrl: 'http://127.0.0.1:3000/api' */
+  apiBaseUrl: 'https://josesocialpoc.azurewebsites.net/api'
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
