@@ -1,7 +1,7 @@
 export interface Author {
     uuid: string;
     fullName: string;
-    id: Cart;
+    id: Products;
 }
 
 export interface Note {
@@ -16,7 +16,7 @@ export interface Post {
     id: string[];
 }
 
-export interface Cart {
+export interface Products {
     beer: boolean;
     galletas: boolean;
     cereals: boolean;
