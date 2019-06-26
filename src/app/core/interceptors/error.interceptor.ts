@@ -28,7 +28,7 @@ export class ErrorInterceptor implements HttpInterceptor {
         ) {
           this.authService.logout();
         } else {
-          this.toastService.addToast(error.error[0]);
+          this.toastService.addToast(error);
         }
 
         return throwError(error);

@@ -17,7 +17,7 @@ export class JWTInterceptor implements HttpInterceptor {
 
       request = request.clone({
         setHeaders: {
-          Authorization: `JWT ${accessToken}`
+          Authorization: `Bearer ${accessToken}`
         }
       });
     }
