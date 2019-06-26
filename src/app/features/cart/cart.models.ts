@@ -18,7 +18,7 @@ export interface Post {
 
 export interface Products {
     beer: boolean;
-    galletas: boolean;
+    biscuits: boolean;
     cereals: boolean;
     chips: boolean;
     fruit: boolean;

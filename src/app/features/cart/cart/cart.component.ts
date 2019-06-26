@@ -21,6 +21,24 @@ export class CartComponent implements OnInit {
     }, {
         name: 'Chips',
         checked: false
+    }, {
+        name: 'Fruit',
+        checked: false
+    }, {
+        name: 'Milk',
+        checked: false
+    }, {
+        name: 'Potatoes',
+        checked: false
+    }, {
+        name: 'TomatoBrick',
+        checked: false
+    }, {
+        name: 'Water',
+        checked: false
+    }, {
+        name: 'Yogourt',
+        checked: false
     }];
 
     changeCheckbox(tags, i) {
