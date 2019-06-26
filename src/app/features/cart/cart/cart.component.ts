@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/services/user.service';
 import { CartService } from 'src/app/core/services/cart.service';
 @Component({
