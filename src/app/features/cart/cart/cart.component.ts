@@ -41,11 +41,11 @@ export class CartComponent implements OnInit {
         checked: false
     }];
 
-    changeCheckbox(tags, i) {
+/*     changeCheckbox(tags, i) {
         if (tags) {
             this.tags[i].checked = !this.tags[i].checked;
         }
-    }
+    } */
 
     constructor(
         public userService: UserService,
