@@ -13,7 +13,7 @@ export interface Note {
 export interface Post {
     notes: Note[];
     createdAt: any;
-    id: string[];
+    id: Products;
 }
 
 export interface Products {
