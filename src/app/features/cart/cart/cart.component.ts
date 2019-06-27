@@ -41,6 +41,70 @@ export class CartComponent implements OnInit {
         checked: false
     }];
 
+    tags1 = [{
+        name: 'Butter',
+        checked: false
+    }, {
+        name: 'ColdCuts',
+        checked: false
+    }, {
+        name: 'Eggs',
+        checked: false
+    }, {
+        name: 'Eggplant',
+        checked: false
+    }, {
+        name: 'Macaroni',
+        checked: false
+    }, {
+        name: 'Mushrooms',
+        checked: false
+    }, {
+        name: 'Olives',
+        checked: false
+    }, {
+        name: 'Sausages',
+        checked: false
+    }, {
+        name: 'Spaghetti',
+        checked: false
+    }, {
+        name: 'Squash',
+        checked: false
+    }];
+
+    tags2 = [{
+        name: 'Apples',
+        checked: false
+    }, {
+        name: 'Celery',
+        checked: false
+    }, {
+        name: 'CleaningSupplies',
+        checked: false
+    }, {
+        name: 'Melon',
+        checked: false
+    }, {
+        name: 'Onions',
+        checked: false
+    }, {
+        name: 'ParchmentPaper',
+        checked: false
+    }, {
+        name: 'Pears',
+        checked: false
+    }, {
+        name: 'Pizza',
+        checked: false
+    }, {
+        name: 'Strawberries',
+        checked: false
+    }, {
+        name: 'Zucchini',
+        checked: false
+    }];
+
 /*     changeCheckbox(tags, i) {
         if (tags) {
             this.tags[i].checked = !this.tags[i].checked;
