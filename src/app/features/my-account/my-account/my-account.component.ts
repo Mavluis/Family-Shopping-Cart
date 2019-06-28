@@ -21,12 +21,12 @@ export class MyAccountComponent implements OnInit {
     constructor(private fb: FormBuilder, private userService: UserService) { }
 
     ngOnInit() {
-        this.updateProfileForm.setValue({
+/*         this.updateProfileForm.setValue({
             fullName: this.userService.currentUser.fullName,
             preferences: {
                 ...this.userService.currentUser.preferences
             }
-        });
+        }); */
     }
 
     updateProfile() {
