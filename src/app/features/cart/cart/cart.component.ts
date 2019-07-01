@@ -9,6 +9,7 @@ import { CartService } from 'src/app/core/services/cart.service';
 
 export class CartComponent implements OnInit {
 
+    
     tags = [{
         name: 'Beer',
         checked: false
