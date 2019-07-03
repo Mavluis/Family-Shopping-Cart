@@ -14,7 +14,7 @@ export class CartService {
     constructor(private http: HttpClient) { }
 
     getCart() {
-        return this.http.get(`${environment.apiBaseUrl}/user/cart`)
+        return this.http.get(`${environment.apiBaseUrl}/cart`)
             .pipe(
                 tap((posts: Post[]) => {
                     this.posts = posts.sort((p1, p2) => {
@@ -26,7 +26,7 @@ export class CartService {
 
     addCart(postId: string, note: string, user: ShoppingCartUser) {
         return this.http
-            .post(`${environment.apiBaseUrl}/post/${postId}/comment`, {
+            .post(`${environment.apiBaseUrl}/post/${postId}/create-cart`, {
                 note
             })
             .pipe(
