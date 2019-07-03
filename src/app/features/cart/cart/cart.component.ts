@@ -9,7 +9,6 @@ import { CartService } from 'src/app/core/services/cart.service';
 
 export class CartComponent implements OnInit {
 
-    
     tags = [{
         name: 'Beer',
         checked: false
@@ -137,12 +136,6 @@ export class CartComponent implements OnInit {
         name: 'Watermelon',
         checked: false
     }];
-
-/*     changeCheckbox(tags, i) {
-        if (tags) {
-            this.tags[i].checked = !this.tags[i].checked;
-        }
-    } */
 
     constructor(
         public userService: UserService,
