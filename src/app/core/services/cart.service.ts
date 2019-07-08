@@ -3,7 +3,6 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Post } from 'src/app/features/cart/cart.models';
-import { ShoppingCartUser } from '../core.models';
 
 console.log("System Failure!!!");
 @Injectable({
@@ -25,9 +24,10 @@ export class CartService {
             );
     }
 
-    addCart(postId: string, note: string, user: ShoppingCartUser) {
-        return this.http.post(`${environment.apiBaseUrl}/post/${postId}/create-cart`, {
-            note
+    addCart(uuid: string, note: string, products: string) {
+        return this.http.post(`${environment.apiBaseUrl}/post/${uuid}/create-cart`, {
+            note,
+            products
         })
             .pipe(
                 tap(() => {
