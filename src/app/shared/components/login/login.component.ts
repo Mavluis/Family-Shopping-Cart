@@ -25,7 +25,7 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe(
         () => {
-          /* this.userService.getUserProfile().subscribe(); */
+          this.userService.getUserProfile().subscribe();
           console.log(this.authService, this.userService);
           this.router.navigate(['/cart']);
         },

@@ -7,7 +7,7 @@ export function getInitialData(userService: UserService) {
     if (localStorage.getItem('auth')) {
       return new Promise(async resolve => {
         try {
-/*           await userService.getUserProfile().toPromise(); */
+          await userService.getUserProfile().toPromise();
 
           return resolve();
         } catch (error) {

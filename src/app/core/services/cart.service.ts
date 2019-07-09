@@ -4,22 +4,22 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Post } from 'src/app/features/cart/cart.models';
 
-console.log("System Failure!!!");
 @Injectable({
     providedIn: 'root'
 })
 export class CartService {
     posts: Post[];
-
+    
     constructor(private http: HttpClient) { }
-
+    
     getCart() {
-        return this.http.get(`${environment.apiBaseUrl}/get/cart`)
-            .pipe(
-                tap((posts: Post[]) => {
-                    this.posts = posts.sort((p1, p2) => {
-                        return p2.createdAt - p1.createdAt;
-                    });
+        return this.http.get(`${environment.apiBaseUrl}/cart`)
+        .pipe(
+            tap((posts: Post[]) => {
+                this.posts = posts.sort((p1, p2) => {
+                    return p2.createdAt - p1.createdAt;
+                });
+                console.log("System Failure!!!");
                 })
             );
     }
@@ -36,7 +36,8 @@ export class CartService {
                             post.notes.unshift({
                                 id: this.uuidv4(),
                                 createdAt: Date.now(),
-                                note
+                                note,
+                                products
                             });
                         }
                         return post;

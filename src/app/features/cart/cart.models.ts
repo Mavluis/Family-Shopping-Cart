@@ -8,6 +8,7 @@ export interface Note {
     createdAt: number;
     note: string;
     id?: string;
+    products: any;
 }
 
 export interface Post {

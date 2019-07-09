@@ -12,7 +12,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-/*   getUserProfile() {
+  getUserProfile() {
     return this.http
       .get(`${environment.apiBaseUrl}/user`)
       .pipe(tap((user: ShoppingCartUser) => (this.currentUser = user)));
@@ -27,5 +27,5 @@ export class UserService {
         };
       })
     );
-  } */
+  }
 }
