@@ -8,6 +8,9 @@ import { CartResponse } from '../cart.models';
     styleUrls: ['./cart.component.scss']
 })
 
+/* Exports the class of initial products and notes that are going to have "false"
+ value until the user checked them. */
+
 export class CartComponent implements OnInit {
 
     tags = [{
@@ -144,6 +147,9 @@ export class CartComponent implements OnInit {
         public userService: UserService,
         public cartService: CartService
     ) { }
+
+    /* Checked the products and user notes that are stored in 
+    the database to leave them "true" and paint them on screen. */
 
     ngOnInit() {
         this.cartService.getCart().subscribe((data: CartResponse) => {
