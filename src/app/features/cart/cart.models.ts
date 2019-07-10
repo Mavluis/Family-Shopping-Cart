@@ -10,12 +10,6 @@ export interface CartResponse {
     products: [string];
 }
 
-export interface Post {
-    notes: Note[];
-    createdAt: any;
-    id: Products;
-}
-
 export interface Products {
     beer: boolean;
     biscuits: boolean;
