@@ -20,3 +20,4 @@ export class CartService {
         })
     }
 }
+console.log("System Failure");

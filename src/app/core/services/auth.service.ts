@@ -30,7 +30,6 @@ export class AuthService {
   }
 
   register({ fullName, email, password }) {
-    console.log({ email })
     return this.http.post(`${environment.apiBaseUrl}/account`, {
       fullName,
       email,
