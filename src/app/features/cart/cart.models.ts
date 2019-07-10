@@ -1,14 +1,13 @@
-export interface Author {
-    uuid: string;
-    fullName: string;
-    id: Products;
-}
-
 export interface Note {
     createdAt: number;
     note: string;
     id?: string;
     products: any;
+}
+
+export interface CartResponse {
+    note: string;
+    products: [string];
 }
 
 export interface Post {
