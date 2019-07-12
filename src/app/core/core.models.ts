@@ -10,6 +10,7 @@ export interface Preferences {
   newpassword?: string;
   repeatnewpass?: string;
   regularlist: string;
+  note: string;
 }
 
 export interface ShoppingCartUser {

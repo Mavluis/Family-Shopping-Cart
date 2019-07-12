@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/services/user.service';
 import { CartService } from 'src/app/core/services/cart.service';
 import { CartResponse } from '../cart.models';
+import { FormBuilder } from '@angular/forms';
+import { ModalService } from 'src/app/core/services/modal.service';
 
 @Component({
     selector: 'sn-cart',
@@ -10,9 +12,17 @@ import { CartResponse } from '../cart.models';
 })
 
 /* Exports the class of initial products and notes that are going to have "false"
- value until the user checked them. */
+value until the user checked them. */
 
 export class CartComponent implements OnInit {
+
+    saveForm = this.fb.group({
+        tags: [''],
+        tags1: [''],
+        tags2: [''],
+        tags3: [''],
+        note: ['']
+    })
 
     tags = [{
         name: 'Beer',
@@ -145,6 +155,9 @@ export class CartComponent implements OnInit {
     note = "";
 
     constructor(
+        private fb: FormBuilder,
+
+        private modalService: ModalService,
         public userService: UserService,
         public cartService: CartService
     ) { }
@@ -179,31 +192,16 @@ export class CartComponent implements OnInit {
             })
         });
     }
-    initGetCart() {
-        this.cartService.addCart(this.note, products:[string]).subscribe((data: CartResponse) => {
-            this.note = data.note;
-            data.products.forEach(product => {
-                for (let i = 0; i < this.tags.length; i++) {
-                    if (product === this.tags[i].name) {
-                        this.tags[i].checked = true;
-                    }
-                }
-                for (let i = 0; i < this.tags1.length; i++) {
-                    if (product === this.tags1[i].name) {
-                        this.tags1[i].checked = true;
-                    }
-                }
-                for (let i = 0; i < this.tags2.length; i++) {
-                    if (product === this.tags2[i].name) {
-                        this.tags2[i].checked = true;
-                    }
-                }
-                for (let i = 0; i < this.tags3.length; i++) {
-                    if (product === this.tags3[i].name) {
-                        this.tags3[i].checked = true;
-                    }
-                }
-            })
-        });
+    save() {
+        const { note, products } = this.saveForm.value;
+        if (this.saveForm.valid) {
+            this.cartService.addCart( note, products ).subscribe(() => {
+                this.saveForm.reset();
+                this.modalService.open(
+                    'Cart Saved!!',
+                    'Please, continue'
+                );
+            });
+        }
     }
 }
