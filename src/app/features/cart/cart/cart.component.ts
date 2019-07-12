@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/services/user.service';
 import { CartService } from 'src/app/core/services/cart.service';
 import { CartResponse } from '../cart.models';
+
 @Component({
     selector: 'sn-cart',
     templateUrl: './cart.component.html',
@@ -175,9 +176,34 @@ export class CartComponent implements OnInit {
                         this.tags3[i].checked = true;
                     }
                 }
-
             })
         });
-
+    }
+    initGetCart() {
+        this.cartService.addCart(this.note, products:[string]).subscribe((data: CartResponse) => {
+            this.note = data.note;
+            data.products.forEach(product => {
+                for (let i = 0; i < this.tags.length; i++) {
+                    if (product === this.tags[i].name) {
+                        this.tags[i].checked = true;
+                    }
+                }
+                for (let i = 0; i < this.tags1.length; i++) {
+                    if (product === this.tags1[i].name) {
+                        this.tags1[i].checked = true;
+                    }
+                }
+                for (let i = 0; i < this.tags2.length; i++) {
+                    if (product === this.tags2[i].name) {
+                        this.tags2[i].checked = true;
+                    }
+                }
+                for (let i = 0; i < this.tags3.length; i++) {
+                    if (product === this.tags3[i].name) {
+                        this.tags3[i].checked = true;
+                    }
+                }
+            })
+        });
     }
 }
