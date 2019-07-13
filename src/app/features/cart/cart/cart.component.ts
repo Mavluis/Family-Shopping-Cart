@@ -191,16 +191,16 @@ export class CartComponent implements OnInit {
             })
         });
     }
-    save() {
-        const { note, name } = this.saveForm.value;
+    saveC() {
+        const { note, tagname } = this.saveForm.value;
         if (this.saveForm.valid) {
-            this.cartService.addCart( note, name ).subscribe(() => {
+            this.cartService.addCart(note[0], tagname[0]).subscribe(() => {
                 this.saveForm.reset();
                 this.modalService.open(
                     'Cart Saved!!',
                     'Please, continue'
-                    );
-                });
-            }
+                );
+            });
+        }
     }
 }

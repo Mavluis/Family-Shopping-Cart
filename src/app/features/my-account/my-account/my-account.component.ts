@@ -31,7 +31,6 @@ export class MyAccountComponent implements OnInit {
         }); */
     }
     updateProfile(){
-        return this.http.get(`${environment.apiBaseUrl}/cart`)
-        console.log("updateName");
+        return this.http.get(`${environment.apiBaseUrl}/user`)
     }
 }
