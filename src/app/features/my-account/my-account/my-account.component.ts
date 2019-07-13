@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/core/services/user.service';
@@ -18,7 +20,7 @@ export class MyAccountComponent implements OnInit {
         })
     });
 
-    constructor(private fb: FormBuilder, private userService: UserService) { }
+    constructor(private fb: FormBuilder, private userService: UserService, private http: HttpClient) { }
 
     ngOnInit() {
 /*         this.updateProfileForm.setValue({
@@ -27,5 +29,9 @@ export class MyAccountComponent implements OnInit {
                 ...this.userService.currentUser.preferences
             }
         }); */
+    }
+    updateProfile(){
+        return this.http.get(`${environment.apiBaseUrl}/cart`)
+        console.log("updateName");
     }
 }

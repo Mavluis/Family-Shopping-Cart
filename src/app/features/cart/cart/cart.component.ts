@@ -156,7 +156,6 @@ export class CartComponent implements OnInit {
 
     constructor(
         private fb: FormBuilder,
-
         private modalService: ModalService,
         public userService: UserService,
         public cartService: CartService
@@ -193,15 +192,15 @@ export class CartComponent implements OnInit {
         });
     }
     save() {
-        const { note, products } = this.saveForm.value;
+        const { note, name } = this.saveForm.value;
         if (this.saveForm.valid) {
-            this.cartService.addCart( note, products ).subscribe(() => {
+            this.cartService.addCart( note, name ).subscribe(() => {
                 this.saveForm.reset();
                 this.modalService.open(
                     'Cart Saved!!',
                     'Please, continue'
-                );
-            });
-        }
+                    );
+                });
+            }
     }
 }
