@@ -9,9 +9,13 @@ export class CartService {
     
     constructor(private http: HttpClient) { }
     
+    /* Function to pick up the products and notes saved in the BB.DD. */
+
     getCart() {
         return this.http.get(`${environment.apiBaseUrl}/cart`)     
     }
+
+    /* Function to modify or add products and notes in the BB.DD. */
 
     addCart(note: string, products: [string]) {
         return this.http.post(`${environment.apiBaseUrl}/create-cart`, {
