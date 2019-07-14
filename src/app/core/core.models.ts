@@ -14,8 +14,8 @@ export interface Preferences {
 }
 
 export interface ShoppingCartUser {
-  uuid: string;
   fullName: string;
+  uuid: string;
   email: string;
   preferences: Preferences;
 }
