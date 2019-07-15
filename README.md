@@ -47,3 +47,6 @@ OrangeJuice,
 RedWine, 
 ToiletPaper, 
 Watermelon
+
+# ORDER BY
+ORDER BY created_at asc;

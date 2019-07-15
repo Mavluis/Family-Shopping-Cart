@@ -21,7 +21,7 @@ export class CartComponent implements OnInit {
         tags1: [''],
         tags2: [''],
         tags3: [''],
-        note: ['']
+        note: ''
     })
 
     tags = [{
@@ -192,9 +192,9 @@ export class CartComponent implements OnInit {
         });
     }
     saveCart() {
-        const { note, name } = this.saveForm.value;
+        const { note, product } = this.saveForm.value;
         if (this.saveForm.valid) {
-            this.cartService.addCart(note[0], name[0]).subscribe(() => {
+            this.cartService.addCart(note[0], product[0]).subscribe(() => {
                 this.saveForm.reset();
                 this.modalService.open(
                     'Cart Saved!!',
