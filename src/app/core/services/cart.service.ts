@@ -14,10 +14,10 @@ export class CartService {
     addCart(note: string, products: [string]) {
         return this.http.post(`${environment.apiBaseUrl}/create-cart`, {
             note,
-            products
+            name
         })
     }
-    
+
     /* Function to pick up the products and notes saved in the BB.DD. */
 
     getCart() {
