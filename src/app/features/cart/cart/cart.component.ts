@@ -4,6 +4,7 @@ import { CartService } from 'src/app/core/services/cart.service';
 import { CartResponse } from '../cart.models';
 import { FormBuilder } from '@angular/forms';
 import { ModalService } from 'src/app/core/services/modal.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'sn-cart',
