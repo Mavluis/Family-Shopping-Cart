@@ -193,8 +193,9 @@ export class CartComponent implements OnInit {
     }
     saveCart() {
         const { note, name } = this.saveForm.value;
+
         if (this.saveForm.valid) {
-            this.cartService.addCart(note[0], name[0]).subscribe(() => {
+            this.cartService.addCart({note, name}).subscribe(() => {
                 this.saveForm.reset();
                 this.modalService.open(
                     'Cart Saved!!',

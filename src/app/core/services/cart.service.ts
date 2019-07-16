@@ -11,7 +11,7 @@ export class CartService {
 
     /* Function to modify or add products and notes in the BB.DD. */
 
-    addCart(note: string, products: [string]) {
+    addCart(note: string, name: [string]) {
         return this.http.post(`${environment.apiBaseUrl}/create-cart`, {
             note,
             name
