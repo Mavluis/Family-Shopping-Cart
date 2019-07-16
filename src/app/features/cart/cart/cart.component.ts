@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/services/user.service';
 import { CartService } from 'src/app/core/services/cart.service';
 import { CartResponse } from '../cart.models';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { ModalService } from 'src/app/core/services/modal.service';
-import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'sn-cart',
@@ -17,143 +16,49 @@ value until the user checked them. */
 
 export class CartComponent implements OnInit {
 
-    saveForm = this.fb.group({
-        tags: [''],
-        tags1: [''],
-        tags2: [''],
-        tags3: [''],
-        note: ''
-    })
-
-    tags = [{
-        name: 'Beer',
-        checked: false
-    }, {
-        name: 'Biscuits',
-        checked: false
-    }, {
-        name: 'Cereals',
-        checked: false
-    }, {
-        name: 'Chips',
-        checked: false
-    }, {
-        name: 'Fruit',
-        checked: false
-    }, {
-        name: 'Milk',
-        checked: false
-    }, {
-        name: 'Potatoes',
-        checked: false
-    }, {
-        name: 'TomatoBrick',
-        checked: false
-    }, {
-        name: 'Water',
-        checked: false
-    }, {
-        name: 'Yogourt',
-        checked: false
-    }];
-
-    tags1 = [{
-        name: 'Butter',
-        checked: false
-    }, {
-        name: 'ColdCuts',
-        checked: false
-    }, {
-        name: 'Eggs',
-        checked: false
-    }, {
-        name: 'Eggplant',
-        checked: false
-    }, {
-        name: 'Macaroni',
-        checked: false
-    }, {
-        name: 'Mushrooms',
-        checked: false
-    }, {
-        name: 'Olives',
-        checked: false
-    }, {
-        name: 'Sausages',
-        checked: false
-    }, {
-        name: 'Spaghetti',
-        checked: false
-    }, {
-        name: 'Squash',
-        checked: false
-    }];
-
-    tags2 = [{
-        name: 'Apples',
-        checked: false
-    }, {
-        name: 'Celery',
-        checked: false
-    }, {
-        name: 'CleaningSupplies',
-        checked: false
-    }, {
-        name: 'Melon',
-        checked: false
-    }, {
-        name: 'Onions',
-        checked: false
-    }, {
-        name: 'ParchmentPaper',
-        checked: false
-    }, {
-        name: 'Pears',
-        checked: false
-    }, {
-        name: 'Pizza',
-        checked: false
-    }, {
-        name: 'Strawberries',
-        checked: false
-    }, {
-        name: 'Zucchini',
-        checked: false
-    }];
-
-    tags3 = [{
-        name: 'Bananas',
-        checked: false
-    }, {
-        name: 'BottledWater',
-        checked: false
-    }, {
-        name: 'Cherry',
-        checked: false
-    }, {
-        name: 'Coffee',
-        checked: false
-    }, {
-        name: 'Deodorant',
-        checked: false
-    }, {
-        name: 'GlassCleaner',
-        checked: false
-    }, {
-        name: 'OrangeJuice',
-        checked: false
-    }, {
-        name: 'RedWine',
-        checked: false
-    }, {
-        name: 'ToiletPaper',
-        checked: false
-    }, {
-        name: 'Watermelon',
-        checked: false
-    }];
-
-    note = "";
+    form: FormGroup;
+    items: string[] = [
+        "Beer",
+        "Biscuits",
+        "Cereals",
+        "Chips",
+        "Fruit",
+        "Milk",
+        "Potatoes",
+        "TomatoBrick",
+        "Water",
+        "Yogourt",
+        "Butter",
+        "ColdCuts",
+        "Eggs",
+        "Eggplant",
+        "Macaroni",
+        "Mushrooms",
+        "Olives",
+        "Sausages",
+        "Spaghetti",
+        "Squash",
+        "Apples",
+        "Celery",
+        "CleaningSupplies",
+        "Melon",
+        "Onions",
+        "ParchmentPaper",
+        "Pears",
+        "Pizza",
+        "Strawberries",
+        "Zucchini",
+        "Bananas",
+        "BottledWater",
+        "Cherry",
+        "Coffee",
+        "Deodorant",
+        "GlassCleaner",
+        "OrangeJuice",
+        "RedWine",
+        "ToiletPaper",
+        "Watermelon"
+    ];
 
     constructor(
         private fb: FormBuilder,
@@ -162,42 +67,34 @@ export class CartComponent implements OnInit {
         public cartService: CartService
     ) { }
 
+    note = "";
+
     /* Checked the products and user notes that are stored in 
     the database to leave them "true" and paint them on screen. */
 
     ngOnInit() {
-        this.cartService.getCart().subscribe((data: CartResponse) => {
-            this.note = data.note;
-            data.products.forEach(product => {
-                for (let i = 0; i < this.tags.length; i++) {
-                    if (product === this.tags[i].name) {
-                        this.tags[i].checked = true;
-                    }
-                }
-                for (let i = 0; i < this.tags1.length; i++) {
-                    if (product === this.tags1[i].name) {
-                        this.tags1[i].checked = true;
-                    }
-                }
-                for (let i = 0; i < this.tags2.length; i++) {
-                    if (product === this.tags2[i].name) {
-                        this.tags2[i].checked = true;
-                    }
-                }
-                for (let i = 0; i < this.tags3.length; i++) {
-                    if (product === this.tags3[i].name) {
-                        this.tags3[i].checked = true;
-                    }
-                }
-            })
+
+        this.form = this.fb.group({
+            note: [""],
+            checkboxes: this.fb.group({})
+        });
+
+        abstractControl : AbstractControl = this.formGroup.get(tab.id);
+        if(abstractControl instanceof FormGroup){
+            (<FormGroup>abstractControl).addControl(segment.id, this.formBuilder.group({}));
+        }
+
+        this.items.forEach(item => {
+            this.form.get("checkboxes").addControl(item, new FormControl(false));
         });
     }
-    addCart() {
-        const { note, name } = this.saveForm.value;
 
-        if (this.saveForm.valid) {
-            this.cartService.addCart(note, name).subscribe(() => {
-                this.saveForm.reset();
+    addCart() {
+        const { note, items } = this.form.value;
+
+        if (this.form.valid) {
+            this.cartService.addCart(note, items).subscribe(() => {
+                this.form.reset();
                 this.modalService.open(
                     'Cart Saved!!',
                     'Please, continue'
