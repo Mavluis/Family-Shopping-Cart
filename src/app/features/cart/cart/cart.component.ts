@@ -16,14 +16,8 @@ value until the user checked them. */
 
 export class CartComponent implements OnInit {
 
-    saveForm = this.fb.group({
-        tags: [''],
-        tags1: [''],
-        tags2: [''],
-        tags3: [''],
-        note: ''
-    })
-
+    form: FormGroup;
+    
     tags = [{
         name: 'Beer',
         checked: false
@@ -55,7 +49,7 @@ export class CartComponent implements OnInit {
         name: 'Yogourt',
         checked: false
     }];
-
+    
     tags1 = [{
         name: 'Butter',
         checked: false
@@ -87,7 +81,7 @@ export class CartComponent implements OnInit {
         name: 'Squash',
         checked: false
     }];
-
+    
     tags2 = [{
         name: 'Apples',
         checked: false
@@ -119,7 +113,7 @@ export class CartComponent implements OnInit {
         name: 'Zucchini',
         checked: false
     }];
-
+    
     tags3 = [{
         name: 'Bananas',
         checked: false
@@ -151,21 +145,28 @@ export class CartComponent implements OnInit {
         name: 'Watermelon',
         checked: false
     }];
-
+    
     note = "";
-
+    
     constructor(
         private fb: FormBuilder,
         private modalService: ModalService,
         public userService: UserService,
         public cartService: CartService
-    ) { }
-
-    /* Checked the products and user notes that are stored in 
-    the database to leave them "true" and paint them on screen. */
-
-    ngOnInit() {
-        this.cartService.getCart().subscribe((data: CartResponse) => {
+        ) { }
+        
+        /* Checked the products and user notes that are stored in 
+        the database to leave them "true" and paint them on screen. */
+        
+        ngOnInit() {
+            this.form = this.fb.group({
+                tags: [''],
+                tags1: [''],
+                tags2: [''],
+                tags3: [''],
+                note: ''
+            })
+            this.cartService.getCart().subscribe((data: CartResponse) => {
             this.note = data.note;
             data.products.forEach(product => {
                 for (let i = 0; i < this.tags.length; i++) {
@@ -192,11 +193,11 @@ export class CartComponent implements OnInit {
         });
     }
     addCart() {
-        const { note, name } = this.saveForm.value;
+        const { note, name } = this.form.value;
 
-        if (this.saveForm.valid) {
+        if (this.form.valid) {
             this.cartService.addCart(note, name).subscribe(() => {
-                this.saveForm.reset();
+                this.form.reset();
                 this.modalService.open(
                     'Cart Saved!!',
                     'Please, continue'
