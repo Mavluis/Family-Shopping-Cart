@@ -1,7 +1,7 @@
 import { NgModule, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { CartComponent } from './cart/cart.component';
+import { CartComponent } from './cart/cart.comp';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes = [
