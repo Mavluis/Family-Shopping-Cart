@@ -6,12 +6,11 @@ import { LayoutModule } from './layout/layout.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AppInitializerModule } from './app-initializer.module';
-import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppInitializerModule,
-    AppRoutingModule, CoreModule, LayoutModule, SharedModule, ReactiveFormsModule],
+    AppRoutingModule, CoreModule, LayoutModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })
