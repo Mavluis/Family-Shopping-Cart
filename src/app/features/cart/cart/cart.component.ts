@@ -27,7 +27,10 @@ export class CartComponent implements OnInit {
         "Potatoes",
         "TomatoBrick",
         "Water",
-        "Yogourt",
+        "Yogourt"
+    ];
+    
+    items1: string[] = [
         "Butter",
         "ColdCuts",
         "Eggs",
@@ -37,7 +40,10 @@ export class CartComponent implements OnInit {
         "Olives",
         "Sausages",
         "Spaghetti",
-        "Squash",
+        "Squash"
+    ];
+
+    items2: string[] = [
         "Apples",
         "Celery",
         "CleaningSupplies",
@@ -47,7 +53,10 @@ export class CartComponent implements OnInit {
         "Pears",
         "Pizza",
         "Strawberries",
-        "Zucchini",
+        "Zucchini"
+    ];
+
+    items3: string[] = [
         "Bananas",
         "BottledWater",
         "Cherry",
@@ -59,7 +68,6 @@ export class CartComponent implements OnInit {
         "ToiletPaper",
         "Watermelon"
     ];
-
 
     constructor(
         private fb: FormBuilder,
@@ -81,7 +89,6 @@ export class CartComponent implements OnInit {
         }
 
         const initCheckboxForm = (item: string, itemsFromServer: string[]) => {
-            // ese item esta en la lista que viene de servidor
             const abstractControl: AbstractControl = this.form.get("checkboxes");
             const isToCheck = isPresent(item, itemsFromServer);
             if (abstractControl instanceof FormGroup) {
@@ -101,8 +108,10 @@ export class CartComponent implements OnInit {
             });
 
             this.items.forEach((item) => initCheckboxForm(item, itemsFromServer));
+            this.items1.forEach((item) => initCheckboxForm(item, itemsFromServer));
+            this.items2.forEach((item) => initCheckboxForm(item, itemsFromServer));
+            this.items3.forEach((item) => initCheckboxForm(item, itemsFromServer));
 
-            // console.log(this.form.controls["checkboxes"].setValue());
         })
 
     }
