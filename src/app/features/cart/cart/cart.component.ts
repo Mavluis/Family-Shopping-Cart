@@ -17,6 +17,7 @@ value until the user checked them. */
 export class CartComponent implements OnInit {
 
     form: FormGroup;
+
     items: string[] = [
         "Beer",
         "Biscuits",
@@ -29,7 +30,7 @@ export class CartComponent implements OnInit {
         "Water",
         "Yogourt"
     ];
-    
+
     items1: string[] = [
         "Butter",
         "ColdCuts",
@@ -84,7 +85,7 @@ export class CartComponent implements OnInit {
     ngOnInit() {
 
         const isPresent = (product: string, products: string[]) => {
-
+                
             return true;
         }
 
@@ -111,9 +112,7 @@ export class CartComponent implements OnInit {
             this.items1.forEach((item) => initCheckboxForm(item, itemsFromServer));
             this.items2.forEach((item) => initCheckboxForm(item, itemsFromServer));
             this.items3.forEach((item) => initCheckboxForm(item, itemsFromServer));
-
         })
-
     }
 
     addCart() {
@@ -121,10 +120,10 @@ export class CartComponent implements OnInit {
 
         const { note, checkboxes } = this.form.value;
 
-        const items = checkboxes.filter()
+        const item = checkboxes.filter(true);
 
         if (this.form.valid) {
-            this.cartService.addCart(note, items).subscribe(() => {
+            this.cartService.addCart(note, item).subscribe(() => {
                 this.form.reset();
                 this.modalService.open(
                     'Cart Saved!!',
