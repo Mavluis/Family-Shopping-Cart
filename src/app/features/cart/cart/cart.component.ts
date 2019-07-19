@@ -88,7 +88,6 @@ export class CartComponent implements OnInit {
                 for (let i = 0; i < product.length; i++) {
                     if (product === products[i])
                     return true;
-                    
                 }
         };
 
@@ -126,7 +125,9 @@ export class CartComponent implements OnInit {
 
             const item = checkboxes.filter(true);
 
-            if (this.form.valid) {
+            console.log("System Failure");
+
+            if (this.form.value) {
                 this.cartService.addCart(note, item).subscribe(() => {
                     this.form.reset();
                     this.modalService.open(
