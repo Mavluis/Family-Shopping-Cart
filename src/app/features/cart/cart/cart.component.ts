@@ -130,7 +130,7 @@ export class CartComponent implements OnInit {
 
         const namesboxes = Object.keys(checkboxes);
 
-        const checkedItems = [];
+        const checkedItems: string[] = [];
 
         for (const name of namesboxes) {
             if (checkboxes[name]) {
@@ -138,11 +138,8 @@ export class CartComponent implements OnInit {
             }
         }
 
-        const names = checkedItems;
-        console.log(names);
-
         if (this.form.value) {
-            this.cartService.addCart(note, names[0]).subscribe(() => {
+            this.cartService.addCart(note, checkedItems).subscribe(() => {
                 this.modalService.open(
                     'Cart Saved!!',
                     'Please, continue'
