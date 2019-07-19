@@ -85,56 +85,60 @@ export class CartComponent implements OnInit {
     ngOnInit() {
 
         const isPresent = (product: string, products: string[]) => {
-                for (let i = 0; i < product.length; i++) {
-                    if (product === products[i])
+            for (let i = 0; i < product.length; i++) {
+                if (product === products[i])
                     return true;
-                }
+            }
         };
 
         const initCheckboxForm = (item: string, itemsFromServer: string[]) => {
-                const abstractControl: AbstractControl = this.form.get("checkboxes");
-                const isToCheck = isPresent(item, itemsFromServer);
-                if (abstractControl instanceof FormGroup) {
-                    (<FormGroup>abstractControl).addControl(item, new FormControl(isToCheck));
-                }
+            const abstractControl: AbstractControl = this.form.get("checkboxes");
+            const isToCheck = isPresent(item, itemsFromServer);
+            if (abstractControl instanceof FormGroup) {
+                (<FormGroup>abstractControl).addControl(item, new FormControl(isToCheck));
             }
-
-            this.cartService.getCart().subscribe((data: CartResponse) => {
-                this.note = data.note;
-                const itemsFromServer = data.products;
-                console.log(data.products);
-                console.log(data.note);
-
-                this.form = this.fb.group({
-                    note: [this.note],
-                    checkboxes: this.fb.group({})
-                });
-
-                this.items.forEach((item) => initCheckboxForm(item, itemsFromServer));
-                this.items1.forEach((item) => initCheckboxForm(item, itemsFromServer));
-                this.items2.forEach((item) => initCheckboxForm(item, itemsFromServer));
-                this.items3.forEach((item) => initCheckboxForm(item, itemsFromServer));
-            })
         }
 
-        addCart() {
+        this.form = new FormGroup({
+            item: new FormControl()
+        });
 
-            const { note, checkboxes } = this.form.value;
+        this.cartService.getCart().subscribe((data: CartResponse) => {
+            this.note = data.note;
+            const itemsFromServer = data.products;
+            console.log(data.products);
+            console.log(data.note);
 
-            console.log(this.form.value);
+            this.form = this.fb.group({
+                note: [this.note],
+                checkboxes: this.fb.group({})
+            });
 
-            const names = checkboxes.filter(true);
+            this.items.forEach((item) => initCheckboxForm(item, itemsFromServer));
+            this.items1.forEach((item) => initCheckboxForm(item, itemsFromServer));
+            this.items2.forEach((item) => initCheckboxForm(item, itemsFromServer));
+            this.items3.forEach((item) => initCheckboxForm(item, itemsFromServer));
+        })
+    }
 
-            console.log("System Failure");
+    addCart() {
 
-            if (this.form.value) {
-                this.cartService.addCart(note, names).subscribe(() => {
-                    this.form.reset();
-                    this.modalService.open(
-                        'Cart Saved!!',
-                        'Please, continue'
-                    );
-                });
-            }
+        const { note, checkboxes } = this.form.value;
+
+        console.log(this.form.value);
+
+        const [name] = checkboxes[0].slice(form => form === true);
+
+        console.log("System Failure");
+
+        if (this.form.value) {
+            this.cartService.addCart(note, [name]).subscribe(() => {
+                this.form.reset();
+                this.modalService.open(
+                    'Cart Saved!!',
+                    'Please, continue'
+                );
+            });
         }
     }
+}
