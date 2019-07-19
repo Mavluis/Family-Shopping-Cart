@@ -86,7 +86,7 @@ export class CartComponent implements OnInit {
     ngOnInit() {
 
         const isPresent = (product: string, products: string[]) => {
-            for (let i = 0; i < product.length; i++) {
+            for (let i = 0; i < products.length; i++) {
                 if (product === products[i])
                     return true;
             }
@@ -122,6 +122,9 @@ export class CartComponent implements OnInit {
         })
     }
 
+    /* Add and remove checks from products that are no longer wanted or are already 
+    in the physical basket in the supermarket, also modify everything you want to put in Notes. */
+
     addCart() {
 
         const { note, checkboxes } = this.form.value;
@@ -130,8 +133,8 @@ export class CartComponent implements OnInit {
 
         const namesboxes = Object.keys(checkboxes);
 
-        const checkedItems: string[] = [];
-
+        const checkedItems = [];
+        
         for (const name of namesboxes) {
             if (checkboxes[name]) {
                 checkedItems.push(name);

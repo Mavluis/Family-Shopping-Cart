@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://127.0.0.1:3000/api'
-  /* apiBaseUrl: 'https://git.heroku.com/family-shopping-cart.git' */
+  /* apiBaseUrl: 'http://127.0.0.1:3000/api' */
+  apiBaseUrl: 'https://family-shopping-cart.herokuapp.com/'
 };
 
 /*
