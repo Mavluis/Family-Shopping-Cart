@@ -127,13 +127,12 @@ export class CartComponent implements OnInit {
 
         console.log(this.form.value);
 
-        const [name] = checkboxes[0].slice(form => form === true);
-
+/*         const name = checkboxes.object[0].filter(form => form === true);
+ */
         console.log("System Failure");
 
         if (this.form.value) {
-            this.cartService.addCart(note, [name]).subscribe(() => {
-                this.form.reset();
+            this.cartService.addCart(note, note).subscribe(() => {
                 this.modalService.open(
                     'Cart Saved!!',
                     'Please, continue'
