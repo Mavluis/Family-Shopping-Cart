@@ -123,12 +123,12 @@ export class CartComponent implements OnInit {
 
             console.log(this.form.value);
 
-            const item = checkboxes.filter(true);
+            const names = checkboxes.filter(true);
 
             console.log("System Failure");
 
             if (this.form.value) {
-                this.cartService.addCart(note, item).subscribe(() => {
+                this.cartService.addCart(note, names).subscribe(() => {
                     this.form.reset();
                     this.modalService.open(
                         'Cart Saved!!',
