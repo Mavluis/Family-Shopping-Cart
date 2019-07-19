@@ -4,6 +4,7 @@ import { CartService } from 'src/app/core/services/cart.service';
 import { CartResponse } from '../cart.models';
 import { FormBuilder, FormGroup, FormControl, AbstractControl } from '@angular/forms';
 import { ModalService } from 'src/app/core/services/modal.service';
+import { puts } from 'util';
 
 @Component({
     selector: 'sn-cart',
@@ -127,12 +128,21 @@ export class CartComponent implements OnInit {
 
         console.log(this.form.value);
 
-/*         const name = checkboxes.object[0].filter(form => form === true);
- */
-        console.log("System Failure");
+        const namesboxes = Object.keys(checkboxes);
+
+        const checkedItems = [];
+
+        for (const name of namesboxes) {
+            if (checkboxes[name]) {
+                checkedItems.push(name);
+            }
+        }
+
+        const names = checkedItems;
+        console.log(names);
 
         if (this.form.value) {
-            this.cartService.addCart(note, note).subscribe(() => {
+            this.cartService.addCart(note, names[0]).subscribe(() => {
                 this.modalService.open(
                     'Cart Saved!!',
                     'Please, continue'
