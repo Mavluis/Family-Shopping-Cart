@@ -3,40 +3,40 @@
 <form [formGroup]="form" [snMarkAsTouched]="form" (ngSubmit)="addCart()">
     <div class="container">
         <div class="row pt-2">
-            <div class="col-xl-3 col-6" formGroupName="checkboxes">
+            <div class="col-xl-3 col-6" formArrayName="checkboxes">
                 <div class="form-check" *ngFor="let item of items">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" [formControlName]="item" />
+                        <input class="form-check-input" type="checkbox" [formControlName]="item">
                         <span>{{ item }}</span>
                     </label>
                 </div>
                 <hr />
             </div>
 
-            <div class="col-xl-3 col-6" formGroupName="checkboxes">
+            <div class="col-xl-3 col-6" formArrayName="checkboxes">
                 <div class="form-check" *ngFor="let item of items1">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" [formControlName]="item" />
+                        <input class="form-check-input" type="checkbox" [formControlName]="item">
                         <span>{{ item }}</span>
                     </label>
                 </div>
                 <hr />
             </div>
 
-            <div class="col-xl-3 col-6" formGroupName="checkboxes">
+            <div class="col-xl-3 col-6" formArrayName="checkboxes">
                 <div class="form-check" *ngFor="let item of items2">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" [formControlName]="item" />
+                        <input class="form-check-input" type="checkbox" [formControlName]="item">
                         <span>{{ item }}</span>
                     </label>
                 </div>
                 <hr />
             </div>
 
-            <div class="col-xl-3 col-6" formGroupName="checkboxes">
+            <div class="col-xl-3 col-6" formArrayName="checkboxes">
                 <div class="form-check" *ngFor="let item of items3">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" [formControlName]="item" />
+                        <input class="form-check-input" type="checkbox" [formControlName]="item">
                         <span>{{ item }}</span>
                     </label>
                 </div>

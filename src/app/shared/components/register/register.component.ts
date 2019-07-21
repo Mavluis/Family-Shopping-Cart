@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { MatchPasswordValidator } from '../../validator/match-password.validator';
 import { ModalService } from 'src/app/core/services/modal.service';
@@ -10,8 +8,15 @@ import { MailValidator } from '../../validator/mail.validator';
 @Component({
   selector: 'sn-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: []
 })
+
+/* Validates the data of:
+      fullName, minimum 3 characters,
+      email,
+      password, minimum 7 characters,
+      confirmPassword, confirms that it is the same as the password. */
+
 export class RegisterComponent {
   registerForm = this.fb.group(
     {
@@ -28,6 +33,12 @@ export class RegisterComponent {
     private authService: AuthService,
     private modalService: ModalService
   ) {}
+
+  /* It records the data of:
+  fullName, 
+  email, 
+  password,
+  in the database and indicates that the email has to be validated. */
 
   register() {
     const { fullName, email, password } = this.registerForm.value;

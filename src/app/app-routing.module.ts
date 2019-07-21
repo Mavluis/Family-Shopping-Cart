@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: './features/welcome/welcome.module#WelcomeModule'
   },
   {
+    path: 'about',
+    loadChildren: './features/about/about.module#AboutModule'
+  },
+  {
     path: '',
     component: MainLayoutComponent,
     canActivate: [AuthGuard],
@@ -28,10 +32,6 @@ const routes: Routes = [
         loadChildren: './features/my-account/my-account.module#MyAccountModule'
       }
     ]
-  },
-  {
-    path: 'about',
-    loadChildren: './features/about/about.module#AboutModule'
   },
   {
     path: '**',

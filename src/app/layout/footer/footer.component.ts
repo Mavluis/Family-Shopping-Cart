@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 
+/* Component to create the footer of the App that will always be fixed. */
+
 @Component({
     selector: 'sn-footer',
     template: `

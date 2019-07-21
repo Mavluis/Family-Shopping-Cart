@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
 export class AuthService {
   authInfo: AuthInfo;
 
+  /* Module authentication Login, Registration and exit button 
+  to leave the app and not leave any record in memory. */
+
   constructor(private http: HttpClient, private router: Router) {
     this.authInfo = JSON.parse(localStorage.getItem('auth'));
   }

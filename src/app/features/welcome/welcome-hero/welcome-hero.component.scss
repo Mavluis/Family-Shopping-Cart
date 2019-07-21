@@ -1,0 +1,41 @@
+/* Animation module to output color degraded lines from left to right in the texts. */
+
+h2, h6 {
+
+  margin-top: 3em;
+  color: grey;
+  &:first-child {
+    margin-top: 0;
+  }
+  
+    color: white;
+    flex: 1;
+    background-image: linear-gradient(to right, #1e6d1e60 0, #1e6d1e 100%);
+    background-position: 10 1.2em;
+    background-size: 0 50%;
+    background-repeat: no-repeat;
+    transition: background .5s;
+    &:hover {
+      background-size: 100% 100%;
+    }
+    &--thin {
+      background-image: linear-gradient(to right, black 0, black 100%);
+    }
+    &--thick {
+      background-position: 0 -0.1em;
+    }
+    &--offset {
+      background-position: 0 0.2em;
+      box-shadow: inset 0 -.5em 0 0 white;
+    }
+    &--gradient {
+      background-position: 0 -0.1em;
+      background-image: linear-gradient(to right, #1e6d1e 0, #1e6d1e 100%);
+    }
+    &--reverse {
+      background-position: 100% -0.1em;
+      transition: background 1s;
+      background-image: linear-gradient(to right, #1e6d1e 0, #1e6d1e 100%);
+    }
+  }
+  

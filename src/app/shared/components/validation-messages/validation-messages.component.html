@@ -1,24 +1,27 @@
+<!-- Component that serves to not leave any field blank or with erroneous data in the forms, 
+  where there will be a blinking warning of the error. -->
+
 <ng-container *ngIf="control.dirty || control.touched">
   <div class="invalid-feedback" *ngIf="control.hasError('required')">
-    <i class="fa fa-exclamation-triangle"></i> This field is required
+    <i class="fa fa-exclamation-triangle"></i> This field is required !!!
   </div>
 
   <div class="invalid-feedback" *ngIf="control.hasError('malformedMail')">
-    <i class="fa fa-exclamation-triangle"></i> The mail is not valid
+    <i class="fa fa-exclamation-triangle"></i> The mail is not valid !!!
   </div>
 
   <div class="invalid-feedback" *ngIf="control.hasError('missingArroba')">
-    <i class="fa fa-exclamation-triangle"></i> You're missing the "@"
+    <i class="fa fa-exclamation-triangle"></i> You're missing the "@" !!!
   </div>
 
   <div class="invalid-feedback" *ngIf="control.hasError('minlength')">
-    <i class="fa fa-exclamation-triangle"></i> The length is invalid
+    <i class="fa fa-exclamation-triangle"></i> The length is invalid !!!
   </div>
 </ng-container>
 
 <ng-container *ngIf="group?.dirty || group?.touched">
   <div class="invalid-feedback" *ngIf="control.valid && group?.hasError('passwordMismatch')">
     <i class="fa fa-exclamation-triangle"></i> Password and confirmation should
-    match
+    match !!!
   </div>
 </ng-container>

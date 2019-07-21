@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+/* Component to create the header, where the name of the application 
+makes you return to the main screen being fixed throughout the App. */
+
 @Component({
   selector: 'sn-header',
   template: `

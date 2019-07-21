@@ -3,7 +3,7 @@ import { Component, Input } from "@angular/core";
 @Component({
     selector: 'sn-welcome-hero',
     templateUrl: './welcome-hero.component.html',
-    styles: []
+    styleUrls: ['./welcome-hero.component.scss']
 })
 
 export class WelcomeHeroComponent {

@@ -106,7 +106,6 @@ export class CartComponent implements OnInit {
         this.cartService.getCart().subscribe((data: CartResponse) => {
             this.note = data.note;
             const itemsFromServer = data.products;
-            console.log(data.products);
             console.log(data.note);
 
             this.form = this.fb.group({
@@ -133,7 +132,7 @@ export class CartComponent implements OnInit {
         const namesboxes = Object.keys(checkboxes);
 
         const checkedItems = [];
-        
+
         for (const name of namesboxes) {
             if (checkboxes[name]) {
                 checkedItems.push(name);
