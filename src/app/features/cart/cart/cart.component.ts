@@ -85,10 +85,13 @@ export class CartComponent implements OnInit {
     ngOnInit() {
 
         const isPresent = (product: string, products: string[]) => {
-            for (let i = 0; i < products.length; i++) {
-                if (product === products[i])
-                    return true;
-            }
+            console.log(product);
+            if (!products === false) {
+                for (let i = 0; i < products.length; i++) {
+                    if (product === products[i])
+                        return true;
+                }
+            } else return false;
         };
 
         const initCheckboxForm = (item: string, itemsFromServer: string[]) => {
@@ -106,7 +109,6 @@ export class CartComponent implements OnInit {
         this.cartService.getCart().subscribe((data: CartResponse) => {
             this.note = data.note;
             const itemsFromServer = data.products;
-            console.log(data.note);
 
             this.form = this.fb.group({
                 note: [this.note],
@@ -126,11 +128,7 @@ export class CartComponent implements OnInit {
     addCart() {
 
         const { note, checkboxes } = this.form.value;
-
-        console.log(this.form.value);
-
         const namesboxes = Object.keys(checkboxes);
-
         const checkedItems = [];
 
         for (const name of namesboxes) {
