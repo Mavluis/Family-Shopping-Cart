@@ -12,11 +12,11 @@ const routes: Routes = [
   },
   {
     path: 'welcome',
-    loadChildren: './features/welcome/welcome.module#WelcomeModule'
+    loadChildren: () => import('./features/welcome/welcome.module').then(m => m.WelcomeModule)
   },
   {
     path: 'about',
-    loadChildren: './features/about/about.module#AboutModule'
+    loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule)
   },
   {
     path: '',
@@ -25,11 +25,11 @@ const routes: Routes = [
     children: [
       {
         path: 'cart',
-        loadChildren: './features/cart/cart.module#CartModule'
+        loadChildren: () => import('./features/cart/cart.module').then(m => m.CartModule)
       },
       {
         path: 'my-account',
-        loadChildren: './features/my-account/my-account.module#MyAccountModule'
+        loadChildren: () => import('./features/my-account/my-account.module').then(m => m.MyAccountModule)
       }
     ]
   },
