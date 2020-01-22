@@ -9,7 +9,7 @@ makes you return to the main screen being fixed throughout the App. */
     <nav class="navbar navbar-dark bg-primary justify-content-center">
       <a class="btn btn-primary" href="#" role="button">
         <i class="fas fa-cart-arrow-down"></i>
-        FAMILY SHOPPING CART</a>
+        FAMILY SHOP CART</a>
     </nav>
   `,
   styles: [
