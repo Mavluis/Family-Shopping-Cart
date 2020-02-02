@@ -10,7 +10,7 @@ export class AboutComponent {
   You can see in my social networks more information about me:`;
   contact = {
     description: 'If you want to contact with me, please can send me an email to:',
-    mail: 'mavluis@gmail.com',
+    mail: 'support@familyshopcart.com',
     firm: '® Luis Fernández Martínez © 2019'
   };
 }
