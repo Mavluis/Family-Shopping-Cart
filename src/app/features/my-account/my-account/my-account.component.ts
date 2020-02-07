@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/core/services/user.service';
-import { FormControl } from '@angular/forms';
+// import { FormControl } from '@angular/forms';
 
 @Component({
     selector: 'sn-my-account',
