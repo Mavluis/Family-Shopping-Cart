@@ -6,6 +6,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ValidationMessagesComponent } from './components/validation-messages/validation-messages.component';
 import { MarkAsTouchedDirective } from './directives/mark-as-touched-directive';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     RegisterComponent,
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
-    NotFoundComponent
+    NotFoundComponent,
+    LoaderComponent
     ],
   imports: [CommonModule, ReactiveFormsModule],
   exports: [
@@ -22,7 +24,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     RegisterComponent,
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
-    NotFoundComponent
+    LoaderComponent
   ]
 })
 export class SharedModule {}

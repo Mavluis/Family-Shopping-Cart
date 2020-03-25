@@ -7,7 +7,7 @@ import { Error } from '../core.models';
 export class ToastService {
   toasts = [];
 
-  addToast(toastData: ToastData | Error, delay: number = 0) {
+  addToast(toastData: ToastData | Error, delay: number = 5000) {
     if ('message' in toastData) {
       this.toasts.unshift(toastData);
     } else {

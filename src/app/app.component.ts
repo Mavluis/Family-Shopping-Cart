@@ -7,7 +7,7 @@ import { LoaderService } from './core/services/loader.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'family-shopping-cart';
+  title = 'family-shop-cart';
 
   constructor(public loaderService: LoaderService ) {}
 }
