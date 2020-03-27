@@ -6,6 +6,7 @@ import { LayoutModule } from './layout/layout.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AppInitializerModule } from './app-initializer.module';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 @NgModule({
