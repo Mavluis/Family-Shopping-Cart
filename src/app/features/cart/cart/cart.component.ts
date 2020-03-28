@@ -19,8 +19,8 @@ export class CartComponent implements OnInit {
     form: FormGroup;
 
     items: string[] = [
-        "Beer",
-        "Biscuits",
+        "Cerveza",
+        "Galletas",
         "Cereals",
         "Chips",
         "Fruit",
