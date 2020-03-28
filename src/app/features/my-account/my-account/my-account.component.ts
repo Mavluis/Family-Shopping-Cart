@@ -10,11 +10,12 @@ import { UserService } from 'src/app/core/services/user.service';
 export class MyAccountComponent implements OnInit {
     updateProfileForm = this.fb.group({
         fullName: ['', [Validators.required]],
-        preferences: this.fb.group({
-            password: ['', [Validators.nullValidator]],
-            newpassword: ['', [Validators.nullValidator]],
-            repeatnewpass: ['', [Validators.nullValidator]],
-            regularlist: []
+        preferences: 
+        this.fb.group({
+            // password: ['', [Validators.nullValidator]],
+            // newpassword: ['', [Validators.nullValidator]],
+            // repeatnewpass: ['', [Validators.nullValidator]],
+            // regularlist: []
         })
     });
 
