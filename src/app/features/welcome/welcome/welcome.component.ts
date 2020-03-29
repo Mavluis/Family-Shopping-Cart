@@ -11,17 +11,17 @@ export class WelcomeComponent {
     {
       id: 1,
       icon: 'fa fa-list',
-      message: 'Make your shopping list'
+      message: 'Haz tu lista de la compra.'
     },
     {
       id: 2,
       icon: 'fa fa-users',
-      message: 'Your family can also'
+      message: 'Tu familia también puede hacerla.'
     },
     {
       id: 3,
       icon: 'fa fa-cloud-upload-alt',
-      message: "You won't forget anything!"
+      message: "No te olvidarás de nada!!!."
     }
   ];
 }
