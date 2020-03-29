@@ -13,7 +13,7 @@ export interface Preferences {
   note: string;
 }
 
-export interface ShoppingCartUser {
+export interface ShopCartUser {
   fullName: string;
   uuid: string;
   email: string;

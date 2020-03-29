@@ -1,35 +1,35 @@
 <form class="p-5" [formGroup]="updateProfileForm" [snMarkAsTouched]="updateProfileForm" (ngSubmit)="updateProfile()">
     <div class="form-group">
-        <label>Name</label>
+        <label>Nombre</label>
         <input class="form-control" type="text" formControlName="fullName" placeholder="Enter your family name" />
     </div>
 
     <div formGroupName="preferences">
         <div class="form-group">
-            <label>Regular shopping list</label>
+            <label>Lista de la compra habitual</label>
             <textarea class="form-control" type="text" rows="6" formControlName="regularlist"
-                placeholder="Enter regular shopping list... NOT YET AVAILABLE!!!"></textarea>
+                placeholder="TODAVIA NO DISPONIBLE!!!"></textarea>
             <sn-validation-messages [control]="updateProfileForm.get('preferences.regularlist')">
             </sn-validation-messages>
         </div>
 
         <div class="form-group">
-            <label>Change Password</label>
-            <input class="form-control" type="text" formControlName="password" placeholder="Enter your password - NOT YET AVAILABLE!!!" />
+            <label>Cambio de Password</label>
+            <input class="form-control" type="text" formControlName="password" placeholder="TODAVIA NO DISPONIBLE!!!" />
             <sn-validation-messages [control]="updateProfileForm.get('preferences.password')"></sn-validation-messages>
         </div>
 
         <div class="form-group">
-            <label>Change New password</label>
-            <input class="form-control" type="text" formControlName="newpassword" placeholder="Enter new password - NOT YET AVAILABLE!!!" />
+            <label>Nueva password</label>
+            <input class="form-control" type="text" formControlName="newpassword" placeholder="TODAVIA NO DISPONIBLE!!!" />
             <sn-validation-messages [control]="updateProfileForm.get('preferences.newpassword')"></sn-validation-messages>
         </div>
 
         <div class="form-group">
-            <label>Repeat New password</label>
-            <input class="form-control" type="text" formControlName="repeatnewpass" placeholder="Repite new password - NOT YET AVAILABLE!!!" />
+            <label>Repite nueva password</label>
+            <input class="form-control" type="text" formControlName="repeatnewpass" placeholder="TODAVIA NO DISPONIBLE!!!" />
             <sn-validation-messages [control]="updateProfileForm.get('preferences.repeatnewpass')"></sn-validation-messages>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
