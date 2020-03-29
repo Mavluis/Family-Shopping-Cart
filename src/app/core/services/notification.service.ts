@@ -16,7 +16,7 @@ export class NotificationService {
           // 'Account Activated!!',
           'Cuenta Activada!!',
           // 'Please, log in and enter your Shopping Cart!!!'
-          'Por favor, haz login y entra en tu cuenta Shopping Cart!!!'
+          'Por favor, inicia sesión y entra en tu cuenta Shopping Cart!!!'
         );
       } else if (params.notification === 'account-not-activated') {
         this.modalService.open(

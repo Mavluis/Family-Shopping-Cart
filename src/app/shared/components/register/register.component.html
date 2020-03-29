@@ -2,7 +2,7 @@
 
 <form [formGroup]="registerForm" [snMarkAsTouched]="registerForm" (ngSubmit)="register()">
   <div class="form-group">
-    <label>Name</label>
+    <label>Nombre</label>
     <input class="form-control" type="text" formControlName="fullName" placeholder="Enter your name" />
     <sn-validation-messages [control]="registerForm.get('fullName')"></sn-validation-messages>
   </div>
@@ -12,15 +12,15 @@
     <sn-validation-messages [control]="registerForm.get('email')"></sn-validation-messages>
   </div>
   <div class="form-group">
-    <label>Password</label>
+    <label>Contraseña</label>
     <input class="form-control" type="password" formControlName="password" placeholder="Enter your password" />
     <sn-validation-messages [control]="registerForm.get('password')"></sn-validation-messages>
   </div>
   <div class="form-group">
-    <label>Confirm your password</label>
+    <label>Confirma tu contraseña</label>
     <input class="form-control" type="password" formControlName="confirmPassword" placeholder="Confirm your password" />
     <sn-validation-messages [control]="registerForm.get('confirmPassword')" [group]="registerForm">
     </sn-validation-messages>
   </div>
-  <button type="submit" class="btn btn-primary mt-2">Register</button>
+  <button type="submit" class="btn btn-primary mt-2">Crea una cuenta</button>
 </form>

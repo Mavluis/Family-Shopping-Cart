@@ -20,7 +20,7 @@ import { Component } from "@angular/core";
         </a></li>
             </ul>
         </div>
-        <a class="btn btn-primary" href="/about" role="button">About</a>
+        <a class="btn btn-primary" href="/about" role="button">Contacto</a>
     </nav>
     `,
     styles: [
