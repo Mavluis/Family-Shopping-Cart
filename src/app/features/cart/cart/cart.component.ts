@@ -19,55 +19,55 @@ export class CartComponent implements OnInit {
     form: FormGroup;
 
     items: string[] = [
-        "Cerveza",
-        "Galletas",
-        "Cereals",
-        "Chips",
-        "Fruit",
-        "Milk",
-        "Potatoes",
-        "TomatoBrick",
-        "Water",
-        "Yogourt"
+        'Agua', 
+        'Arroz', 
+        'Atun', 
+        'Bastoncillos', 
+        'Cafe', 
+        'Cervezas', 
+        'Champu', 
+        'Chocolate', 
+        'Detergente', 
+        'Espaguetis'
     ];
 
     items1: string[] = [
-        "Butter",
-        "ColdCuts",
-        "Eggs",
-        "Eggplant",
-        "Macaroni",
-        "Mushrooms",
-        "Olives",
-        "Sausages",
-        "Spaghetti",
-        "Squash"
+        'Fiambre', 
+        'Galletas', 
+        'Garbanzos', 
+        'Gel', 
+        'Huevos', 
+        'Kiwis', 
+        'Leche', 
+        'Lentejas', 
+        'Macarrones', 
+        'Mantequilla'
     ];
 
     items2: string[] = [
-        "Apples",
-        "Celery",
-        "CleaningSupplies",
-        "Melon",
-        "Onions",
-        "ParchmentPaper",
-        "Pears",
-        "Pizza",
-        "Strawberries",
-        "Zucchini"
+        'Manzanas', 
+        'Mermelada', 
+        'Naranjas', 
+        'Nueces', 
+        'Pan molde', 
+        'Pan tostado', 
+        'Papel(cocina)', 
+        'Papel(WC)', 
+        'Patatas', 
+        'Patatas_bolsa'
     ];
 
     items3: string[] = [
-        "Bananas",
-        "BottledWater",
-        "Cherry",
-        "Coffee",
-        "Deodorant",
-        "GlassCleaner",
-        "OrangeJuice",
-        "RedWine",
-        "ToiletPaper",
-        "Watermelon"
+        'Peras', 
+        'Pizzas', 
+        'Platanos', 
+        'Suavizante', 
+        'Tomate(brick)', 
+        'Tomates', 
+        'Vino', 
+        'Yogures', 
+        'Zumos', 
+        'Zumos(brick)'
     ];
 
     constructor(
