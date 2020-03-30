@@ -54,7 +54,7 @@ export class CartComponent implements OnInit {
         'Papel(cocina)', 
         'Papel(WC)', 
         'Patatas', 
-        'Patatas_bolsa'
+        'Patatas(bolsa)'
     ];
 
     items3: string[] = [
