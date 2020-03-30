@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  description = `I'm a full stack developer. 
-  You can see in my social networks more information about me:`;
+  description = `Aplicación Web para la lista de la compra. 
+  Puedes ver en mis redes sociales mas información sobre mi:`;
   contact = {
-    description: 'If you want to contact with me, please can send me an email to:',
+    description: 'Si quieres contactar conmigo, por favor tu puedes hacerlo al Email:',
     mail: 'support@familyshopcart.com',
-    firm: '® Luis Fernández Martínez © 2019'
+    firm: '®FamilyShopCart ©2019'
   };
 }
