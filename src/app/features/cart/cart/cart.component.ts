@@ -140,7 +140,7 @@ export class CartComponent implements OnInit {
             this.cartService.addCart(note, checkedItems).subscribe(() => {
                 this.modalService.open(
                     'Cesta de la Compra Guardada!!!',
-                    'Por favor, continua.'
+                    'Por favor, continua'
                 );
             });
         }
