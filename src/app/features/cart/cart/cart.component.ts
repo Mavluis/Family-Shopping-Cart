@@ -85,7 +85,6 @@ export class CartComponent implements OnInit {
     ngOnInit() {
 
         const isPresent = (product: string, products: string[]) => {
-            console.log(product);
             if (!products === false) {
                 for (let i = 0; i < products.length; i++) {
                     if (product === products[i])
@@ -140,8 +139,8 @@ export class CartComponent implements OnInit {
         if (this.form.value) {
             this.cartService.addCart(note, checkedItems).subscribe(() => {
                 this.modalService.open(
-                    'Cesta de la Compra Guardada!!',
-                    'Por favor, continua'
+                    'Cesta de la Compra Guardada!!!',
+                    'Por favor, continua.'
                 );
             });
         }
